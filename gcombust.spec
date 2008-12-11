@@ -19,7 +19,7 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 License:	GPLv2+
 Requires:	cdrkit cdrkit-genisoimage cdrkit-icedax
 Requires:	cdlabelgen diffutils cdparanoia
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 BuildRequires:	gtk+-devel
 
 %description
