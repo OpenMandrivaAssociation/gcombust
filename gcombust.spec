@@ -41,6 +41,7 @@ rm -rf %{buildroot}
 cp %SOURCE4 po/de.po
 
 %build
+libtoolize --install --force
 %configure2_5x
 %make 
 
