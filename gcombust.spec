@@ -1,6 +1,6 @@
 %define name	gcombust
 %define version	0.1.55
-%define release	%mkrel 14
+%define release	%mkrel 15
 
 Name:		%{name}
 Summary:	Disc writing frontend
@@ -8,7 +8,7 @@ Version:	%{version}
 Release:	%{release}
 Source0:	http://www.abo.fi/~jmunsin/gcombust/%{name}-%{version}.tar.bz2
 Source4:	gcombust-0.1.55-de.po
-Patch0:		gcombust-0.1.55-getopt.patch
+Patch:		gcombust-0.1.55-getopt.patch
 Patch1:		gcombust-0.1.55-defaults.patch
 Patch2:		gcombust-0.1.55-gcc4.patch
 Patch3:		gcombust-0.1.55-desktop.patch
