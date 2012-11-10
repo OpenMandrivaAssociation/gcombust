@@ -1,0 +1,17 @@
+--- gcombust-0.1.55/gcombust.desktop~	2003-06-30 19:08:00.000000000 +0200
++++ gcombust-0.1.55/gcombust.desktop	2006-08-01 14:56:04.000000000 +0200
+@@ -2,11 +2,11 @@
+ Name=gcombust
+ Name[ca]=gcombust
+ Comment=A frontend for mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
+-Comment[ca]=Una interfície per a mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
++Comment[ca]=Una interfÃ­cie per a mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
+ Comment[es]=Un interfaz para mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
+ Comment[gl]=Unha interface para mkisofs/mkhybrid/cdda2wav/cdrecord/cdlabelgen
+-Icon=gcombust.xpm
++Icon=gcombust
+ Terminal=false
+ Type=Application
+-Categories=Application;System
++Categories=GTK;AudioVideo;DiscBurning;
+ Exec=gcombust

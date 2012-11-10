@@ -1,0 +1,74 @@
+--- gcombust-0.1.55/src/audio.c.defaults	2002-05-24 20:02:18.000000000 +0200
++++ gcombust-0.1.55/src/audio.c	2004-09-14 21:50:24.559108640 +0200
+@@ -102,7 +102,7 @@
+ 	total_audio_size += size_sec;
+ 
+ 	g_snprintf(size, AUDIO_LABEL_LENGTH,
+-			_("Total size: %lu MB (/783) Sectors: %lu (/333000) Time: (%02d:%02d)"),
++			_("Total size: %lu MB (/846) Sectors: %lu (/360000) Time: (%02d:%02d)"),
+ 			2352*total_audio_size/(1024*1024), total_audio_size,
+ 			minutes(total_audio_size), seconds(total_audio_size));
+ 	gtk_label_set(GTK_LABEL(audio_size_label), size);
+--- gcombust-0.1.55/src/optimize_usage.c.defaults	2003-06-30 15:07:27.000000000 +0200
++++ gcombust-0.1.55/src/optimize_usage.c	2004-09-14 21:54:03.309853472 +0200
+@@ -35,7 +35,7 @@
+ 
+ static GtkWidget *cdsize_option_menu, *cdsize_selected_label, *cdsector_selected_label;
+ static GtkWidget *used_size_label, *used_sectors_label, *wasted_size_label, *wasted_sectors_label;
+-long int opt_cdsize = 333000;
++long int opt_cdsize = 360000;
+ 
+ typedef struct {
+ 	GtkWidget *window;
+@@ -329,6 +329,7 @@
+ 			"pressing delete"), NULL);
+ 
+ 	opt_try_harder = gtk_check_button_new_with_label(_("Try harder"));
++	gtk_toggle_button_set_active(opt_try_harder, TRUE);
+ 	gtk_widget_show(opt_try_harder);
+ 	gtk_tooltips_set_tip(tooltips, opt_try_harder,
+ 			_("Uses a more exact method of packing the files (useful if you "
+@@ -343,17 +344,17 @@
+ 	gtk_box_pack_start(GTK_BOX(vbox), optionmenu, FALSE, FALSE, 0);
+ 	cdsize_option_menu = gtk_menu_new();
+ 
+-	menuitem = gtk_menu_item_new_with_label(_("74 min"));
++	menuitem = gtk_menu_item_new_with_label(_("80 min"));
+ 	gtk_widget_show(menuitem);
+ 	gtk_menu_append(GTK_MENU(cdsize_option_menu), menuitem);
+ 	gtk_signal_connect(GTK_OBJECT(menuitem), "button_release_event",
+-			GTK_SIGNAL_FUNC(size_selection_74), NULL);
++			GTK_SIGNAL_FUNC(size_selection_80), NULL);
+ 
+-	menuitem = gtk_menu_item_new_with_label(_("80 min"));
++	menuitem = gtk_menu_item_new_with_label(_("74 min"));
+ 	gtk_widget_show(menuitem);
+ 	gtk_menu_append(GTK_MENU(cdsize_option_menu), menuitem);
+ 	gtk_signal_connect(GTK_OBJECT(menuitem), "button_release_event",
+-			GTK_SIGNAL_FUNC(size_selection_80), NULL);
++			GTK_SIGNAL_FUNC(size_selection_74), NULL);
+ 
+ 	menuitem = gtk_menu_item_new_with_label(_("90 min"));
+ 	gtk_widget_show(menuitem);
+@@ -389,7 +390,7 @@
+ 	cdsector_selected_label = gtk_label_new(_("Sectors: 333000"));
+ 	gtk_widget_show(cdsector_selected_label);
+ 	gtk_box_pack_start(GTK_BOX(vbox), cdsector_selected_label, FALSE, FALSE, 0);
+-
++	set_cd_size(360000);
+ /* used/wasted info TODO: make some down-up progressbars here, seems to require gtk1.1.x though */
+ 
+ 	hbox = gtk_hbox_new(FALSE, 1);
+@@ -418,10 +419,10 @@
+ 	gtk_widget_show(frame_vbox);
+ 	gtk_container_add(GTK_CONTAINER(wasted_frame), frame_vbox);
+ 
+-	wasted_size_label = gtk_label_new("650 MB");
++	wasted_size_label = gtk_label_new("703 MB");
+ 	gtk_widget_show(wasted_size_label);
+ 	gtk_box_pack_start(GTK_BOX(frame_vbox), wasted_size_label, FALSE, FALSE, 1);
+-	wasted_sectors_label = gtk_label_new("333000");
++	wasted_sectors_label = gtk_label_new("360000");
+ 	gtk_widget_show(wasted_sectors_label);
+ 	gtk_box_pack_start(GTK_BOX(frame_vbox), wasted_sectors_label, FALSE, FALSE, 1);
+ 

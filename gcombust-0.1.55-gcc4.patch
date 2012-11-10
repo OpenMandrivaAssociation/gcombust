@@ -1,0 +1,19 @@
+--- gcombust-0.1.55/src/optimize_usage.h~	1999-12-20 21:23:18.000000000 +0100
++++ gcombust-0.1.55/src/optimize_usage.h	2005-05-19 15:40:32.147816304 +0200
+@@ -16,7 +16,7 @@
+ ** Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ */
+ 
+-extern GtkWidget *opt_try_harder;
++/*extern GtkWidget *opt_try_harder;*/
+ extern long int opt_cdsize;
+ 
+ void open_optimize_size_win(GtkWidget *, gpointer);
+--- gcombust-0.1.55/src/rip_audio.h~	2000-12-11 19:26:41.000000000 +0100
++++ gcombust-0.1.55/src/rip_audio.h	2005-05-19 15:40:55.579254184 +0200
+@@ -20,4 +20,4 @@
+ 
+ extern char *cdda2wav_path, *cdda_device_path, *cdparanoia_path;
+ extern char *def_rip_path;
+-extern GtkWidget *rip_path_entry;
++/*extern GtkWidget *rip_path_entry;*/

@@ -1,0 +1,603 @@
+--- gcombust-0.1.55/src/cdrecord_options.c.cdrkit	2003-02-13 21:00:55.000000000 +0100
++++ gcombust-0.1.55/src/cdrecord_options.c	2007-01-28 18:59:14.000000000 +0100
+@@ -141,7 +141,7 @@
+ 	gtk_widget_show(no_image);
+ 	gtk_box_pack_start(GTK_BOX(vbox2), no_image, FALSE, TRUE, 0);
+ 	gtk_tooltips_set_tip(tooltips, no_image, _("Do not make a disk image of the files in Data Files. "
+-				"Pipes output from mkisofs directly to cdrecord on the fly."), NULL);
++				"Pipes output from genisoimage directly to wodim on the fly."), NULL);
+ 
+ 	hbox = gtk_hbox_new(FALSE, 0);
+ 	gtk_widget_show(hbox);
+@@ -282,7 +282,7 @@
+ 	gtk_tooltips_set_tip(tooltips, audio_device_path,
+ 			_("Path to device from which to copy (for example for cooked style "
+ 				"devices (plain IDE): /dev/hdb, or for SCSI devices in the "
+-				"\"cdrecord style\": 0,6,0)"), NULL);
++				"\"wodim style\": 0,6,0)"), NULL);
+ #endif
+ 
+ 	gtk_signal_connect(GTK_OBJECT(no_image),
+@@ -326,7 +326,7 @@
+ 	gtk_tooltips_set_tip(tooltips, spinbutton,
+ 			_("Set the grace time before starting the write (the "
+ 				"default is 9 seconds, keep it at that if your "
+-				"cdrecord version does not understand this option)"),
++				"wodim version does not understand this option)"),
+ 			NULL);
+ 	gtk_widget_show(spinbutton);
+ 	gtk_box_pack_start(GTK_BOX(hbox), spinbutton, FALSE, TRUE, 0);
+@@ -366,8 +366,8 @@
+ 	gtk_box_pack_end(GTK_BOX(hbox2), fslabel, FALSE, FALSE, 0);
+ 	gtk_tooltips_set_tip(tooltips, fsentry, _("Set the FIFO size (default "
+ 				"is 4 MB, and it will be used if nothing is specified) - goes "
+-				"directly to the cdrecord fs= option so the syntax is the same "
+-				"as cdrecord's (e.g. 10x53k == 630 kBytes)"), NULL);
++				"directly to the wodim fs= option so the syntax is the same "
++				"as wodim's (e.g. 10x53k == 630 kBytes)"), NULL);
+ 	cdr_info->fifo = fsentry;
+ 
+ 	hbox4 = gtk_hbox_new(FALSE, 0);
+@@ -417,7 +417,7 @@
+ 	gtk_widget_show(overburn);
+ 	gtk_box_pack_start(GTK_BOX(hbox4), overburn, FALSE, TRUE, 0);
+ 	gtk_tooltips_set_tip(tooltips, overburn,
+-			_("Allow cdrecord to write more than the official size of a medium. "
++			_("Allow wodim to write more than the official size of a medium. "
+ 			"Most CD recorders only do overburning in DAO mode, and there is no "
+ 			"guarantee that your drive supports overburning at all."), NULL);
+ 
+@@ -525,7 +525,7 @@
+ 	gtk_box_pack_start(GTK_BOX(hbox), cdrw_force, FALSE, FALSE, 0);
+ 	gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON(cdrw_force), FALSE);
+ 	gtk_tooltips_set_tip(tooltips, cdrw_force,
+-			_("Force to continue on some errors. cdrecord will do some tricks "
++			_("Force to continue on some errors. wodim will do some tricks "
+ 				"in order to try to allow you to blank bad CD-RW disks. "
+ 				"You should probably use the \"all\" blanking method when "
+ 				"using this option. Use this option only when you have trouble "
+--- gcombust-0.1.55/src/config_files.c.cdrkit	2002-10-28 19:38:03.000000000 +0100
++++ gcombust-0.1.55/src/config_files.c	2007-01-28 18:59:14.000000000 +0100
+@@ -277,11 +277,11 @@
+ 	char *string;
+ 	void (*function)(char *arg);
+ } string_function[] = {
+-	{"mkisofs_path=", set_mkisofs_path},
+-	{"cdrecord_path=", set_cdrecord_path},
++	{"genisoimage_path=", set_mkisofs_path},
++	{"wodim_path=", set_cdrecord_path},
+ 	{"cdlabelgen_path=", set_cdlabelgen_path},
+ 	{"gdiff_path=", set_diff_path},
+-	{"cdda2wav_path=", set_cdda2wav_path},
++	{"icedax_path=", set_cdda2wav_path},
+ 	{"cdparanoia_path=", set_cdparanoia_path},
+ 	{"lpr_path=", set_lpr_path},
+ 	{"iso_location=", set_iso_location},
+@@ -357,15 +357,15 @@
+ 	read_env();
+ 
+ 	if (NULL == mkisofs_path)
+-		mkisofs_path = which("mkisofs");
++		mkisofs_path = which("genisoimage");
+ 	if (NULL == cdrecord_path)
+-		cdrecord_path = which("cdrecord");
++		cdrecord_path = which("wodim");
+ 	if (NULL == cdlabelgen_path)
+ 		cdlabelgen_path = which("cdlabelgen");
+ 	if (NULL == diff_path)
+ 		diff_path = which("diff");
+ 	if (NULL == cdda2wav_path)
+-		cdda2wav_path = which("cdda2wav");
++		cdda2wav_path = which("icedax");
+ 	if (NULL == cdparanoia_path)
+ 		cdparanoia_path = which("cdparanoia");
+ 	if (NULL == lpr_path) {
+@@ -384,7 +384,7 @@
+ 		alert_user_of_error(_(" Could not open config file.\n"
+ 					" Please configure gcombust in the File/Preferences menu \n"
+ 					" (Preferences window opened, at least the path to \n"
+-					" mkisofs need to be filled in) "));
++					" genisoimage need to be filled in) "));
+ 		preferences_cmd_callback(NULL, NULL);
+ 		free(config);
+ 		return;
+@@ -435,11 +435,11 @@
+ 	}
+ 	free(config);
+ 
+-	fprintf(fp, "mkisofs_path=%s\n", mkisofs_path);
+-	fprintf(fp, "cdrecord_path=%s\n", cdrecord_path);
++	fprintf(fp, "genisoimage_path=%s\n", mkisofs_path);
++	fprintf(fp, "wodim_path=%s\n", cdrecord_path);
+ 	fprintf(fp, "cdlabelgen_path=%s\n", cdlabelgen_path);
+ 	fprintf(fp, "gdiff_path=%s\n", diff_path);
+-	fprintf(fp, "cdda2wav_path=%s\n", cdda2wav_path);
++	fprintf(fp, "icedax_path=%s\n", cdda2wav_path);
+ 	fprintf(fp, "cdparanoia_path=%s\n", cdparanoia_path);
+ 	fprintf(fp, "lpr_path=%s\n", lpr_path);
+ 	fprintf(fp, "iso_location=%s\n", def_image_path);
+--- gcombust-0.1.55/src/contractions.c.cdrkit	2002-07-30 22:42:48.000000000 +0200
++++ gcombust-0.1.55/src/contractions.c	2007-01-28 18:59:14.000000000 +0100
+@@ -224,7 +224,7 @@
+ 			g_warning("popen_r_err_in: close(iso_stdout_to_cdr_stdin[1]) failed");
+ 
+ 		execv(cdrecord->elements[0], cdrecord->elements);
+-		g_warning("%s::%i: popen_r_err_in: execl() returned (cdrecord)", __FILE__, __LINE__);
++		g_warning("%s::%i: popen_r_err_in: execl() returned (wodim)", __FILE__, __LINE__);
+ 		_exit(127);
+ 	} else if ((iso = fork()) < 0) {
+ 		g_warning("popen_r_err_in: Error forking (child)!");
+@@ -248,7 +248,7 @@
+ 			if (dup2(iso_stdout_to_cdr_stdin[1], STDOUT_FILENO) < 0)
+ 				g_warning("open_r_err_in: dup2 iso_stdout_to_cdr_stdin[1] failed");
+ 		if (close(iso_stdout_to_cdr_stdin[1]) < 0)
+-			g_warning("popen_r_err_in: close(iso_stdout_to_cdr_stdin[1]) failed (mkisofs)");
++			g_warning("popen_r_err_in: close(iso_stdout_to_cdr_stdin[1]) failed (genisoimage)");
+ 
+ 		execv(mkisofs->elements[0], mkisofs->elements);
+ 		g_warning("%s::%i: popen_r_err_in: execl() returned (mkiosfs)", __FILE__, __LINE__);
+--- gcombust-0.1.55/src/extra_options.c.cdrkit	2003-06-27 21:51:00.000000000 +0200
++++ gcombust-0.1.55/src/extra_options.c	2007-01-28 18:59:14.000000000 +0100
+@@ -115,8 +115,8 @@
+ 	gtk_widget_show(del);
+ 	gtk_box_pack_end(GTK_BOX(hbox), del, FALSE, FALSE, 0);
+ 
+-	combo = add_combo(hbox, _("Additional flags to cdrecord Here you can specify "
+-				"custom flags to cdrecord not available directly through "
++	combo = add_combo(hbox, _("Additional flags to wodim Here you can specify "
++				"custom flags to wodim not available directly through "
+ 				"gcombust. Write a flag in the text entry, and press return "
+ 				"to add it. Due to implementation details and lack of time "
+ 				"on gcombust author's part, it is possible that "
+@@ -129,7 +129,7 @@
+ 	gtk_signal_connect(GTK_OBJECT(del), "clicked",
+ 			GTK_SIGNAL_FUNC(del_extra_burn_clicked), combo);
+ 
+-	label = gtk_label_new(_("Custom cdrecord options:"));
++	label = gtk_label_new(_("Custom wodim options:"));
+ 	gtk_widget_show(label);
+ 	gtk_box_pack_end(GTK_BOX(hbox), label, FALSE, FALSE, 0);
+ }
+@@ -143,8 +143,8 @@
+ 	gtk_widget_show(hbox);
+ 	gtk_container_add(GTK_CONTAINER(frame), hbox);
+ 
+-	combo = add_combo(hbox, _("Additional flags to mkisofs. Here you can specify "
+-				"custom flags to mkisofs not available directly through "
++	combo = add_combo(hbox, _("Additional flags to genisoimage. Here you can specify "
++				"custom flags to genisoimage not available directly through "
+ 				"gcombust. Write a flag in the text entry, and press return "
+ 				"to add it. Due to implementation details and lack of time "
+ 				"on gcombust author's part, it is likely that "
+--- gcombust-0.1.55/src/multisession.c.cdrkit	2003-02-23 14:50:35.000000000 +0100
++++ gcombust-0.1.55/src/multisession.c	2007-01-28 18:59:14.000000000 +0100
+@@ -95,7 +95,7 @@
+ 	gtk_tooltips_set_tip(tooltips, enable_cdplus,  _("Make an image for CDplus. "
+ 				"The first session of CDplus consist of audio tracks and "
+ 				"the second session is a data track. When making a "
+-				"multi session CD, mkisofs usually reads the directory "
++				"multi session CD, genisoimage usually reads the directory "
+ 				"structure from the previous session. This option "
+ 				"disables that (as audio tracks have no directory "
+ 				"structure)."), NULL); 
+--- gcombust-0.1.55/src/modify_file_set.c.cdrkit	2002-07-30 22:37:15.000000000 +0200
++++ gcombust-0.1.55/src/modify_file_set.c	2007-01-28 18:59:14.000000000 +0100
+@@ -106,22 +106,22 @@
+ 	const char *mkisofs_error;
+ 	const char *msg_to_user;
+ } mkisofs_size_errors[] = {
+-	{"Usage: mkisofs", N_(" mkisofs received arguments it did "
++	{"Usage: genisoimage", N_(" genisoimage received arguments it did "
+ 			"not understand, \n maybe you are using "
+-			"too old a version of mkisofs? ")},
+-	{"Invalid node -", N_(" mkisofs detected an invalid filename "
++			"too old a version of genisoimage? ")},
++	{"Invalid node -", N_(" genisoimage detected an invalid filename "
+ 			"in the list ")},
+ 	{"volume size must be >= 800K", N_(" HFS volume size must be >= 800K "
+ 			"- file/dir size too small (the size \n"
+ 			" estimate might be a little bit wrong), "
+ 			"add more files before burning ")},
+-	{"Unable to sort directory ", N_(" mkisofs failed to sort directory, "
++	{"Unable to sort directory ", N_(" genisoimage failed to sort directory, "
+ 			"(maybe a problem with multi session, \n try "
+ 			"enabling the No RR option if multi session "
+ 			"is used). It it also possible \n that there "
+ 			"is a duplicate filename in the list, if so, "
+ 			"please rename it. \n It is also quite "
+-			"possible that there is a bug in mkisofs. ")},
++			"possible that there is a bug in genisoimage. ")},
+ 	{"Joliet tree sort failed.", N_(" Joliet tree sort failed - maybe "
+ 			"the image contains \n a filename-component "
+ 			"longer than 64 characters? ")}
+@@ -163,10 +163,10 @@
+ 
+ 			if (feof(output)) {
+ 				error_msg = _(" EOF reached reading "
+-						"mkisofs size output ");
++						"genisoimage size output ");
+ 				done = 1;
+ 			} else if (ferror(output)) {
+-				error_msg = _(" error reading mkisofs "
++				error_msg = _(" error reading genisoimage "
+ 						"size output ");
+ 				done = 1;
+ 			} else if ((start = strstr(in_buf, "Total extents scheduled to be written"))) {
+@@ -183,8 +183,8 @@
+ 			}
+ 		} else {
+ 			error_msg = _(" There were and unrecognized error "
+-					"with mkisofs when calculating the "
+-					"size; \n perhaps your mkisofs "
++					"with genisoimage when calculating the "
++					"size; \n perhaps your genisoimage "
+ 					"is too old for gcombust? ");
+ 			done = 1;
+ 		}
+--- gcombust-0.1.55/src/options.c.cdrkit	2003-01-26 13:16:57.000000000 +0100
++++ gcombust-0.1.55/src/options.c	2007-01-28 18:59:14.000000000 +0100
+@@ -45,7 +45,7 @@
+ 	{NULL, NULL, N_("Bootable CD"), N_("Create a \"El Torito\" bootable CD, you also need to fill in the boot image and catalog below"), FALSE},
+ 	{NULL, "-U", N_("Allow untranslated filenames"), N_("Allows untranslated file names (for example, that have more than one dot (.) in file name). Completely violates ISO 9660. Use with caution."), FALSE},
+ 	{NULL, "-hide-rr-moved", N_("Hide rr_moved"), N_("Rename the directory RR_MOVED to .rr_moved in the Rock Ridge tree."), FALSE},
+-	{NULL, "-no-rr", N_("No RR"), N_("Do not use the Rock Ridge attributes from previous sessions. This may allow mkisofs to work with multi session CDs with broken Rock Ridge signatures on the old sessions."), FALSE},
++	{NULL, "-no-rr", N_("No RR"), N_("Do not use the Rock Ridge attributes from previous sessions. This may allow genisoimage to work with multi session CDs with broken Rock Ridge signatures on the old sessions."), FALSE},
+ 	{NULL, "-dvd-video", N_("Generate DVD-Video Compatible UDF file system"), N_("Fixes file ordering for DVD Video Players"), FALSE}
+ };
+ 
+@@ -68,7 +68,7 @@
+ 
+ options torito_options[] = {
+ 	{NULL, "-b", N_("Boot image: "), N_("Specifies the path/filename of the boot image to be used. The path to the image should be specified relatively to the generated file tree (ie if you add a directory 'disks' with the boot image 'rescue.bin' inside in the Data files tab, you will end up with the boot file 'disks/rescue.bin' in the generated image, so you should put 'disks/rescue.bin' here)"), FALSE},
+-	{NULL, "-c", N_("Boot catalog: "), N_("Specifies the path/filename of the boot catalog to be used. This should be specified in the same manner as above (eg 'disks/boot.catalog'). Note that this file will be inserted by mkisofs in the target file system, so it should not conflict with an existing file!"), FALSE},
++	{NULL, "-c", N_("Boot catalog: "), N_("Specifies the path/filename of the boot catalog to be used. This should be specified in the same manner as above (eg 'disks/boot.catalog'). Note that this file will be inserted by genisoimage in the target file system, so it should not conflict with an existing file!"), FALSE},
+ };
+ 
+ static GtkWidget *table;
+@@ -204,7 +204,7 @@
+ 	for (i = 0; i < sizeof(torito_options)/sizeof(options); i++)
+ 		gtk_widget_set_sensitive(torito_options[i].widget, FALSE);
+ 
+-	frame = make_frame(_("Custom mkisofs options"), 5);
++	frame = make_frame(_("Custom genisoimage options"), 5);
+ 	gtk_box_pack_start(GTK_BOX(vbox), frame, FALSE, TRUE, 0);
+ 	create_extra_mkisofs(frame);
+ 
+--- gcombust-0.1.55/src/preferences.c.cdrkit	2003-06-27 21:30:15.000000000 +0200
++++ gcombust-0.1.55/src/preferences.c	2007-01-28 18:59:14.000000000 +0100
+@@ -101,18 +101,18 @@
+ 	gtk_widget_show(table1);
+ 	gtk_container_add(GTK_CONTAINER(frame3), table1);
+ 	/* mkisofs */
+-	button9 = gtk_button_new_with_label(_("mkisofs"));
++	button9 = gtk_button_new_with_label(_("genisoimage"));
+ 	gtk_widget_show(button9);
+ 	gtk_table_attach(GTK_TABLE(table1), button9, 0, 1, 0, 1,
+ 			(GtkAttachOptions) GTK_FILL,
+ 			(GtkAttachOptions) GTK_FILL, 0, 0);
+ 
+ 	gtk_tooltips_set_tip(tooltips, button9, _("Open up file selector "
+-				"and set the path to the mkisofs program "
+-				"(eg /usr/bin/mkisofs)"), NULL);
++				"and set the path to the genisoimage program "
++				"(eg /usr/bin/genisoimage)"), NULL);
+ 	/* FIXME: this doesn't seem to be freed anywhere */
+ 	add_info = malloc(sizeof(file_req_info));
+-	add_info->title = g_strdup(_("Select path to mkisofs"));
++	add_info->title = g_strdup(_("Select path to genisoimage"));
+ 	add_info->func = (gpointer) &new_mkisofs_path;
+ 	gtk_signal_connect(GTK_OBJECT(button9), "clicked",
+ 			GTK_SIGNAL_FUNC(choose_path), (gpointer) add_info);
+@@ -125,17 +125,17 @@
+ 			(GtkAttachOptions) GTK_FILL, 0, 0);
+ 
+ 	/* cdrecord */
+-	button11 = gtk_button_new_with_label(_("cdrecord"));
++	button11 = gtk_button_new_with_label(_("wodim"));
+ 	gtk_widget_show(button11);
+ 	gtk_table_attach(GTK_TABLE(table1), button11, 0, 1, 2, 3,
+ 			(GtkAttachOptions) GTK_FILL,
+ 			(GtkAttachOptions) GTK_FILL, 0, 0);
+ 
+ 	gtk_tooltips_set_tip(tooltips, button11, _("Open up file selector "
+-				"and set the path to the cdrecord program "
+-				"(eg /usr/bin/cdrecord)"), NULL);
++				"and set the path to the wodim program "
++				"(eg /usr/bin/wodim)"), NULL);
+ 	add_info = malloc(sizeof(file_req_info));
+-	add_info->title = g_strdup(_("Select path to cdrecord"));
++	add_info->title = g_strdup(_("Select path to wodim"));
+ 	add_info->func = (gpointer) &new_cdrecord_path;
+ 	gtk_signal_connect(GTK_OBJECT(button11), "clicked",
+ 			GTK_SIGNAL_FUNC(choose_path), (gpointer) add_info);
+@@ -191,17 +191,17 @@
+ 			GTK_EXPAND | GTK_FILL,
+ 			GTK_FILL, 0, 0);
+ 	/* cdda2wav */
+-	button11 = gtk_button_new_with_label(_("cdda2wav"));
++	button11 = gtk_button_new_with_label(_("icedax"));
+ 	gtk_widget_show(button11);
+ 	gtk_table_attach(GTK_TABLE(table1), button11, 0, 1, 5, 6,
+ 			(GtkAttachOptions) GTK_FILL,
+ 			(GtkAttachOptions) GTK_FILL, 0, 0);
+ 
+ 	gtk_tooltips_set_tip(tooltips, button11, _("Open up file selector "
+-				"and set the path to the cdda2wav program "
+-				"(eg /usr/bin/cdda2wav)"), NULL);
++				"and set the path to the icedax program "
++				"(eg /usr/bin/icedax)"), NULL);
+ 	add_info = malloc(sizeof(file_req_info));
+-	add_info->title = g_strdup(_("Select path to cdda2wav"));
++	add_info->title = g_strdup(_("Select path to icedax"));
+ 	add_info->func = (gpointer) &new_cdda2wav_path;
+ 	gtk_signal_connect(GTK_OBJECT(button11), "clicked",
+ 			GTK_SIGNAL_FUNC(choose_path), (gpointer) add_info);
+@@ -331,8 +331,8 @@
+ 	gtk_box_pack_start(GTK_BOX(hbox), fifo_entry, FALSE, FALSE, 0);
+ 	gtk_tooltips_set_tip(tooltips, fifo_entry, _("Set the fifo size (default "
+ 				"is 4 MB, and it will be used if nothing is specified) - goes "
+-				"directly to the cdrecord fs= option so the syntax is the same "
+-				"as cdrecords (e.g. 10x53k == 630 kBytes)"), NULL);
++				"directly to the wodim fs= option so the syntax is the same "
++				"as wodims (e.g. 10x53k == 630 kBytes)"), NULL);
+ 
+ 	gtk_entry_set_text(GTK_ENTRY(fifo_entry),
+ 			gtk_entry_get_text(GTK_ENTRY(mainptr->cdr_option_info->fifo)));
+--- gcombust-0.1.55/src/readers.c.cdrkit	2003-03-31 19:25:04.000000000 +0200
++++ gcombust-0.1.55/src/readers.c	2007-01-28 18:59:14.000000000 +0100
+@@ -239,7 +239,7 @@
+ 		}
+ 	} else if (strstr(mkisofs_stderr.newline, "Invalid node - ")) { /* TODO: open an error window */
+ 		g_warning("%s", mkisofs_stderr.newline);
+-		alert_user_of_error_msg(_("mkisofs encountered an invalid node\n(e.g., a non-existent file)"), mkisofs_stderr.newline);
++		alert_user_of_error_msg(_("genisoimage encountered an invalid node\n(e.g., a non-existent file)"), mkisofs_stderr.newline);
+ 	} else if (strstr(mkisofs_stderr.newline, "cannot fwrite ")) {
+ 		g_warning("%s", mkisofs_stderr.newline);
+ 		alert_user_of_error(_("Maybe you ran out of hd space for image?"));
+@@ -329,18 +329,18 @@
+ 
+ static void add_cdrecord_stderr_output(int *status, int check_for_end) {
+ 	if (strstr(cdrecord_stderr.newline, 
+-				"cdrecord: Operation not permitted. Cannot do mlockall(2)")
++				"wodim: Operation not permitted. Cannot do mlockall(2)")
+ 			|| strstr(cdrecord_stderr.newline, "Operation not permitted. WARNING: Cannot do mlockall(2).")) {
+-		alert_user_of_error(_("You are probably not running cdrecord as root or you have the wrong permissions on the burner device"));
++		alert_user_of_error(_("You are probably not running wodim as root or you have the wrong permissions on the burner device"));
+ 		*status = FALSE;
+-	} else if (strstr(cdrecord_stderr.newline, "cdrecord: No disk / Wrong disk!")) {
++	} else if (strstr(cdrecord_stderr.newline, "wodim: No disk / Wrong disk!")) {
+ 		alert_user_of_error(_("You need to insert an empty disk"));
+-	} else if (strstr(cdrecord_stderr.newline, "cdrecord: Premature EOF on stdin.")
+-			|| strstr(cdrecord_stderr.newline, "cdrecord: Input buffer error, aborting.")) {
+-		alert_user_of_error(_("Something went wrong with mkisofs/reading the image"));
++	} else if (strstr(cdrecord_stderr.newline, "wodim: Premature EOF on stdin.")
++			|| strstr(cdrecord_stderr.newline, "wodim: Input buffer error, aborting.")) {
++		alert_user_of_error(_("Something went wrong with genisoimage/reading the image"));
+ 	} else if (check_for_end && strstr(cdrecord_stderr.newline, "fifo was")) {
+ 		*status = FALSE;
+-	} else if (strstr(cdrecord_stderr.newline, "cdrecord: Cannot send CUE sheet.")) {
++	} else if (strstr(cdrecord_stderr.newline, "wodim: Cannot send CUE sheet.")) {
+ 		*status = FALSE;
+ 	} else if (strstr(cdrecord_stderr.newline, "WRa Data")) {
+ 		/* drv_jvc.c in cdrecord prints out a lot of this, but I have
+--- gcombust-0.1.55/src/status_text.c.cdrkit	2002-01-13 00:23:03.000000000 +0100
++++ gcombust-0.1.55/src/status_text.c	2007-01-28 18:59:14.000000000 +0100
+@@ -113,12 +113,12 @@
+ 
+ /* create the text box for mkisofs' stdout/stderr and attaches it to vbox */
+ void create_mkisofs_text(GtkWidget *vbox) {
+-	mkisofs_text_scrollbar = create_text(vbox, &mkisofs_text, _("mkisofs/cdda2wav output"));
++	mkisofs_text_scrollbar = create_text(vbox, &mkisofs_text, _("genisoimage/icedax output"));
+ }
+ 
+ /* create the textbox for cdrecord's stdout/stderr and attaches it to vbox */
+ void create_cdrecord_text(GtkWidget *vbox) {
+-	cdrecord_text_scrollbar = create_text(vbox, &cdrecord_text, _("cdrecord output"));
++	cdrecord_text_scrollbar = create_text(vbox, &cdrecord_text, _("wodim output"));
+ }
+ 
+ /* clears the text in the tbox */
+--- gcombust-0.1.55/src/audio.c.cdrkit	2007-01-28 18:59:14.000000000 +0100
++++ gcombust-0.1.55/src/audio.c	2007-01-28 18:59:14.000000000 +0100
+@@ -319,7 +319,7 @@
+ 			NULL, GTK_SIGNAL_FUNC(move_track), (gpointer)1);
+ 
+ 	rip_cd_tool = gtk_toolbar_append_item(GTK_TOOLBAR(toolbar), _("Dump CD"),
+-			_("Dumps content of an audio CD into sound wav files (using cdda2wav)."),
++			_("Dumps content of an audio CD into sound wav files (using icedax)."),
+ 			"Private", NULL, GTK_SIGNAL_FUNC(rip_cd_pressed), NULL);
+ 
+ 	gtk_widget_show(add_track_tool);
+--- gcombust-0.1.55/src/command.c.cdrkit	2003-06-30 19:21:11.000000000 +0200
++++ gcombust-0.1.55/src/command.c	2007-01-28 19:01:28.000000000 +0100
+@@ -194,7 +194,7 @@
+ 	cdr_cmd = make_cdrecord_common(cdr_info, TRUE);
+ 
+ 	if (GTK_TOGGLE_BUTTON(enable_burnproof)->active)
+-		add_option_to_cmd(cdr_cmd, "driveropts=burnproof");
++		add_option_to_cmd(cdr_cmd, "driveropts=burnfree");
+ 
+ 	if (GTK_TOGGLE_BUTTON(disable_fixate)->active)
+ 		add_option_to_cmd(cdr_cmd, "-nofix");
+@@ -704,7 +704,7 @@
+ 	cmd = make_cdrecord_common(cdr_info, FALSE);
+ 
+ 	if (GTK_TOGGLE_BUTTON(enable_burnproof)->active)
+-		add_option_to_cmd(cmd, "driveropts=burnproof");
++		add_option_to_cmd(cmd, "driveropts=burnfree");
+ 
+ 	if (GTK_TOGGLE_BUTTON(enable_multisession)->active) {
+ 		add_option_to_cmd(cmd, "-multi");
+@@ -725,7 +725,7 @@
+ 	cmd = make_cdrecord_common(cdr_info, TRUE);
+ 
+ 	if (GTK_TOGGLE_BUTTON(enable_burnproof)->active)
+-		add_option_to_cmd(cmd, "driveropts=burnproof");
++		add_option_to_cmd(cmd, "driveropts=burnfree");
+ 
+ 	if (GTK_TOGGLE_BUTTON(enable_multisession)->active) {
+ 		add_option_to_cmd(cmd, "-multi");
+@@ -751,7 +751,7 @@
+ 
+ 	for (i = 1; i <= n_tracks; i++) {
+ 		if (NULL == (cdda2wav_cmd = make_cdda2wav_command_for_track(i))) {
+-			g_warning("%s::%i: Could not build command for cdda2wav", __FILE__, __LINE__);
++			g_warning("%s::%i: Could not build command for icedax", __FILE__, __LINE__);
+ 			if (NULL != cdda2wav_burn_commands) {
+ 				g_slist_foreach(cdda2wav_burn_commands, free_command_list, NULL);
+ 				cdda2wav_burn_commands = NULL;
+--- gcombust-0.1.55/src/progressbars.c.cdrkit	2002-05-23 22:54:19.000000000 +0200
++++ gcombust-0.1.55/src/progressbars.c	2007-01-28 18:59:14.000000000 +0100
+@@ -404,7 +404,7 @@
+ 	cdda2wav_cmds = cdda2wav;
+ 
+ 	if (NULL == (cd = get_next_cdda2wav())) {
+-		g_warning("%s::%i: no cdda2wav commands", __FILE__, __LINE__);
++		g_warning("%s::%i: no icedax commands", __FILE__, __LINE__);
+ 		return;
+ 	}
+ 
+--- gcombust-0.1.55/src/common_gtk.c.cdrkit	2002-05-23 20:11:48.000000000 +0200
++++ gcombust-0.1.55/src/common_gtk.c	2007-01-28 18:59:14.000000000 +0100
+@@ -177,10 +177,10 @@
+ 			GTK_SHRINK, GTK_SHRINK, 0, 0);
+ #ifdef __FreeBSD__
+ 	gtk_tooltips_set_tip(tooltips, spinbutton_lun,
+-			_("See /sbin/dmesg and man cdrecord"), NULL);
++			_("See /sbin/dmesg and man wodim"), NULL);
+ #else
+ 	gtk_tooltips_set_tip(tooltips, spinbutton_lun,
+-			_("See /proc/scsi/scsi and man cdrecord"), NULL);
++			_("See /proc/scsi/scsi and man wodim"), NULL);
+ #endif
+ 
+ 	spinbutton_target_adj = gtk_adjustment_new(0, 0, 100, 1, 10, 10);
+@@ -190,10 +190,10 @@
+ 			GTK_SHRINK, GTK_SHRINK, 0, 0);
+ #ifdef __FreeBSD__
+ 	gtk_tooltips_set_tip(tooltips, spinbutton_target,
+-			_("See /sbin/dmesg and man cdrecord"), NULL);
++			_("See /sbin/dmesg and man wodim"), NULL);
+ #else
+ 	gtk_tooltips_set_tip(tooltips, spinbutton_target,
+-			_("See /proc/scsi/scsi and man cdrecord"), NULL);
++			_("See /proc/scsi/scsi and man wodim"), NULL);
+ #endif
+ 
+ 	spinbutton_scsibus_adj = gtk_adjustment_new(0, 0, 100, 1, 10, 10);
+@@ -203,15 +203,15 @@
+ 			GTK_SHRINK, GTK_SHRINK, 0, 0);
+ #ifdef __FreeBSD__
+ 	gtk_tooltips_set_tip(tooltips, spinbutton_scsibus,
+-			_("See /sbin/dmesg and man cdrecord"), NULL);
++			_("See /sbin/dmesg and man wodim"), NULL);
+ #else
+ 	gtk_tooltips_set_tip(tooltips, spinbutton_scsibus,
+-			_("See /proc/scsi/scsi and man cdrecord"), NULL);
++			_("See /proc/scsi/scsi and man wodim"), NULL);
+ #endif
+ 
+ 	gtk_adjustment_set_value(GTK_ADJUSTMENT(spinbutton_target_adj), 6);
+ 
+-	advanced_frame = make_frame(_("Advanced: override cdrecord defaults"), 2);
++	advanced_frame = make_frame(_("Advanced: override wodim defaults"), 2);
+ 
+ 	vbox3 = gtk_vbox_new(FALSE, 0);
+ 	gtk_widget_show(vbox3);
+@@ -242,9 +242,9 @@
+ 	gtk_widget_show(driver_entry);
+ 	gtk_box_pack_start(GTK_BOX(vbox2), driver_entry, TRUE, TRUE, 0);
+ 	gtk_tooltips_set_tip(tooltips, driver_entry,
+-			_("Tell cdrecord to use a specific driver. This should "
++			_("Tell wodim to use a specific driver. This should "
+ 				"usually be left empty unless you know what you are "
+-				"doing (try man cdrecord and cdrecord driver=help)."), NULL);
++				"doing (try man wodim and wodim driver=help)."), NULL);
+ 
+ 	vbox2 = gtk_vbox_new(FALSE, 0);
+ 	gtk_widget_show(vbox2);
+--- gcombust-0.1.55/src/rip_audio.c.cdrkit	2002-02-16 21:00:52.000000000 +0100
++++ gcombust-0.1.55/src/rip_audio.c	2007-01-28 18:59:14.000000000 +0100
+@@ -150,7 +150,7 @@
+ 		return FALSE;
+ 
+ 	while	(extract_line(&cdda2wav_stdout, "\n") || extract_line(&cdda2wav_stdout, "\r")) {
+-		g_message("cdda2wav stdout (unexpected): %s\n", cdda2wav_stdout.newline);
++		g_message("icedax stdout (unexpected): %s\n", cdda2wav_stdout.newline);
+ 	}
+ 	return TRUE;
+ }
+@@ -468,7 +468,7 @@
+ 
+ 		if (NULL == (output = popen_re_unbuffered(cmd))) {
+ 			destroy_cmd(cmd);
+-			g_warning("%s::%i failed to execute cdda2wav rip command", __FILE__, __LINE__);
++			g_warning("%s::%i failed to execute icedax rip command", __FILE__, __LINE__);
+ 			not_running();
+ 			return;
+ 		}
+@@ -620,7 +620,7 @@
+ 	gtk_tooltips_set_tip(tooltips, rip,
+ 			     _("Start converting the audio CD to .wav files"), NULL);
+ 
+-	radiobutton_cdda2wav = gtk_radio_button_new_with_label(rippers, "cdda2wav");
++	radiobutton_cdda2wav = gtk_radio_button_new_with_label(rippers, "icedax");
+ 	rippers = gtk_radio_button_group (GTK_RADIO_BUTTON (radiobutton_cdda2wav));
+ 	gtk_widget_show(radiobutton_cdda2wav);
+ 	gtk_box_pack_end(GTK_BOX(hbox4), radiobutton_cdda2wav, FALSE, TRUE, 5);
+@@ -651,7 +651,7 @@
+ 	gtk_signal_connect(GTK_OBJECT(clear_text), "clicked",
+ 			GTK_SIGNAL_FUNC(delete_cdda2wav_text), 0);
+ 
+-	cdda2wav_text_scrollbar	= create_text(vbox1, &cdda2wav_text, _("cdda2wav output"));
++	cdda2wav_text_scrollbar	= create_text(vbox1, &cdda2wav_text, _("icedax output"));
+ 
+ 	return vbox1;
+ }
+--- gcombust-0.1.55/src/detect_scsi.c.cdrkit	2002-02-23 18:42:34.000000000 +0100
++++ gcombust-0.1.55/src/detect_scsi.c	2007-01-28 18:59:14.000000000 +0100
+@@ -1,3 +1,4 @@
++
+ /*
+ ** Copyright (C) 10 Feb 1999 Jonas Munsin <jmunsin@iki.fi>
+ **  
+@@ -124,7 +125,7 @@
+ 	gtk_widget_show(dialog_window);
+ 
+ 	if (do_cdrecord_shortcommand(" -checkdrive", cdr_info))
+-		label = gtk_label_new(_("cdrecord failed to recognize selected drive\n"
++		label = gtk_label_new(_("wodim failed to recognize selected drive\n"
+ 					"(wrong SCSI settings or no permission to device)!"));
+ 	else
+ 		label = gtk_label_new(_("    Settings OK!    "));
+@@ -231,7 +232,7 @@
+ 	gtk_widget_show(dialog_window);
+ 
+ 	if (do_cdrecord_shortcommand(" -reset", cdr_info))
+-		label = gtk_label_new(_("cdrecord failed to reset selected drive\n"
++		label = gtk_label_new(_("wodim failed to reset selected drive\n"
+ 					"(wrong SCSI settings, no permission to device or\n"
+ 					"the device did not accept the reset sequence)!"));
+ 	else
+--- gcombust-0.1.55/src/menu.c.cdrkit	2007-01-28 18:59:14.000000000 +0100
++++ gcombust-0.1.55/src/menu.c	2007-01-28 18:59:14.000000000 +0100
+@@ -131,7 +131,7 @@
+ 
+ 	ask = gtk_dialog_new();
+ 	gtk_widget_show(ask);
+-	label = gtk_label_new(_("Something (mkisofs or cdrecord) is still running,\n"
++	label = gtk_label_new(_("Something (genisoimage or wodim) is still running,\n"
+ 				"are you really sure you want to exit?"));
+ 	gtk_box_pack_start(GTK_BOX(GTK_DIALOG(ask)->vbox), label, FALSE, FALSE, 10);
+ 	gtk_widget_show(label);
+--- gcombust-0.1.55/src/optimize_usage.c.cdrkit	2007-01-28 18:59:14.000000000 +0100
++++ gcombust-0.1.55/src/optimize_usage.c	2007-01-28 18:59:14.000000000 +0100
+@@ -257,7 +257,7 @@
+ 				done = 1;
+ 			}
+ 		} else {
+-			g_warning("%s::%i: error executing cdrecord ATIP command",
++			g_warning("%s::%i: error executing wodim ATIP command",
+ 					__FILE__, __LINE__);
+ 			done = 1;
+ 		}

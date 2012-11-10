@@ -1,0 +1,113 @@
+--- gcombust-0.1.55/src/menu.c.getopt	2003-06-30 19:26:03.000000000 +0200
++++ gcombust-0.1.55/src/menu.c	2007-01-07 18:41:50.000000000 +0100
+@@ -163,7 +163,7 @@
+ 	about_win = gtk_dialog_new();
+ 	gtk_widget_show(about_win);
+ 
+-	info_text = g_strdup_printf("gcombust version %s\n(c) 1999-2003 Jonas Munsin <jmunsin@iki.fi>\nReleased under GPL.\nhttp://www.iki.fi/jmunsin/gcombust/", VERSION);
++	info_text = g_strdup_printf(VERSION_INFO_STRING, VERSION);
+ 	label = gtk_label_new(info_text);
+ 	g_free(info_text);
+ 
+--- gcombust-0.1.55/src/globals.h.getopt	2003-02-23 15:49:25.000000000 +0100
++++ gcombust-0.1.55/src/globals.h	2007-01-07 18:41:50.000000000 +0100
+@@ -75,3 +75,4 @@
+ 
+ #define TIMEOUT_GTK 400
+ 
++#define VERSION_INFO_STRING "gcombust version %s\n(c) 1999-2003 Jonas Munsin <jmunsin@iki.fi>\nReleased under GPL.\nhttp://www.iki.fi/jmunsin/gcombust/"
+--- gcombust-0.1.55/src/gcombust.c.getopt	2003-03-31 18:55:09.000000000 +0200
++++ gcombust-0.1.55/src/gcombust.c	2007-01-07 18:42:27.000000000 +0100
+@@ -22,6 +22,8 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
++       
++#include <getopt.h>
+ 
+ #include "cdlabel.h"
+ #include "common_gtk.h"
+@@ -32,16 +34,63 @@
+ void exit_program(void) {
+ 	if (0 != cdlabel_tmp_out[0])
+ 		if (0 != remove(cdlabel_tmp_out))
+-			g_warning("gcombust.c::exit_program: could not remove cdlabelgen ps temp-file %s",
+-					cdlabel_tmp_out);
++			g_warning("%s::%i: could not remove cdlabelgen ps temp-file %s",
++					__FILE__, __LINE__, cdlabel_tmp_out);
+ 	if (0 != cdlabel_tmp_items[0])
+ 		if (0 != remove(cdlabel_tmp_items))
+-			g_warning("gcombust.c::exit_program: could not remove cdlabelgen items temp-file %s",
+-					cdlabel_tmp_items);
++			g_warning("%s::%i: gcombust.c::exit_program: could not remove cdlabelgen items temp-file %s",
++					__FILE__, __LINE__, cdlabel_tmp_items);
+ 	g_free(mainptr);
+ 	gtk_main_quit();
+ }
+ 
++static char *initial_selection_path = NULL;
++
++static void do_args(int argc, char *argv[]) {
++	int c;
++
++	while (1) {
++		static struct option long_options[] = {
++			{"help", 0, NULL, 'h'},
++			{"load-selection", 1, NULL, 'l'},
++			{"version", 0, NULL, 'v'},
++			{0, 0, 0, 0}
++		};
++		c = getopt_long(argc, argv, "hl:v", long_options, NULL);
++		if (-1 == c)
++			break;
++		switch (c) {
++			case 'h':
++				printf(_("Usage: gcombust [OPTION]\n"
++							"-h --help\t\tdisplay this help and exit\n"
++							"-l --load-selection\tload saved selection from file\n"
++							"-v --version\t\tdisplay version information and exit\n"));
++				exit(0);
++				break;
++			case 'l':
++				initial_selection_path = optarg;
++				break;
++			case 'v':
++				printf(VERSION_INFO_STRING, VERSION);
++				printf("\n");
++				exit(0);
++				break;
++			case '?':
++				printf(_("See \"gcombust --help\" for more information\n"));
++				break;
++			default:
++				g_warning("%s::%i: getopt returned %c", __FILE__, __LINE__, c);
++				break;
++		}
++	}
++	if (optind < argc) {
++		printf("unrecognized argument:\n");
++		while (optind < argc)
++			printf ("%s ", argv[optind++]);
++		printf ("\n");
++	}
++}
++
+ int main (int argc, char *argv[]) {
+ 	gtk_set_locale(); /* gtk_set_locale calls setlocale last time I checked the
+ 				 * gtk source */
+@@ -49,10 +98,15 @@
+ 	textdomain(PACKAGE);
+ 	gtk_init(&argc, &argv);
+ 
++	do_args(argc, argv);
++
+ 	setup_everything();
+ 
+ 	read_config_file();
+ 
++	if (NULL != initial_selection_path)
++		load_selection(initial_selection_path);
++
+ 	gtk_main();
+ 
+ 	return 0;
