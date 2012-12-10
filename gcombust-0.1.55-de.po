@@ -1,0 +1,2626 @@
+# German message catalog for gcombust
+# Copyright (C) 1999, 2000 Free Software Foundation, Inc.
+# Juergen Lock <nox@jelal.kn-bremen.de>, 1999, 2000
+# Roland Rosenfeld <roland@spinnaker.de>, 2000
+# Götz Waschk <goetz.waschk@gmail.com>, 2002, 2003, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gcombust-0.1.55\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-01-07 18:48+0100\n"
+"PO-Revision-Date: 2007-01-07 18:50+0100\n"
+"Last-Translator: Götz Waschk <goetz.waschk@gmail.com>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8BIT\n"
+
+#: src/audio.c:79 src/audio.c:163
+msgid " Cannot add "
+msgstr " Kann "
+
+#: src/audio.c:81
+msgid " as audio track, it's a directory "
+msgstr " nicht als Audio-Track hinzufügen, es ist ein Verzeichnis "
+
+#: src/audio.c:105
+#, c-format
+msgid "Total size: %lu MB (/846) Sectors: %lu (/360000) Time: (%02d:%02d)"
+msgstr "Gesamtgröße: %lu MB (/846) Sectoren: %lu (/360000) Zeit: (%02d:%02d)"
+
+#: src/audio.c:165
+msgid " as data track, it's a directory "
+msgstr " nicht als Daten-Track hinzufügen, es ist ein Verzeichnis "
+
+#: src/audio.c:191 src/audio.c:229 src/audio.c:248
+#, c-format
+msgid "Total size: %lu MB (/783) Sectors: %lu (/333000) Time: (%02d:%02d)"
+msgstr "Gesamtgröße: %lu MB (/783) Sectoren: %lu (/333000) Zeit: (%02d:%02d)"
+
+#: src/audio.c:296
+msgid "Add audio"
+msgstr "Audio-Track hinzufügen"
+
+#: src/audio.c:297
+msgid "Opens file selector to let you add an audio track"
+msgstr "Öffnet Dateiauswahl um einen Audio-Track hinzuzufügen"
+
+#: src/audio.c:300
+msgid "Add data"
+msgstr "Daten-Track hinzufügen"
+
+#: src/audio.c:301
+msgid ""
+"Opens file selector to let you add a data track if you want a mixed mode CD "
+"(only one data track is possible, it'll be the first one)"
+msgstr ""
+"Öffnet Dateiauswahl um einen Daten-Track für eine Mixed-Mode-CD hinzuzufügen "
+"(nur ein Daten-Track möglich, es wird Track 01)"
+
+#: src/audio.c:305 src/filepicker.c:116
+msgid "Del selected"
+msgstr "Ausgewählte löschen"
+
+#: src/audio.c:306
+msgid "Deletes the selected files"
+msgstr "Lösche die ausgewählten Dateien"
+
+#: src/audio.c:309
+msgid "Del all"
+msgstr "Alles löschen"
+
+#: src/audio.c:310
+msgid "Deletes all files"
+msgstr "Lösche alle Dateien"
+
+#: src/audio.c:313
+msgid "Up"
+msgstr "Hoch"
+
+#: src/audio.c:314
+msgid "Moves selected track up one step"
+msgstr "Verschiebt ausgewählten Track eins nach oben"
+
+#: src/audio.c:317
+msgid "Down"
+msgstr "Runter"
+
+#: src/audio.c:318
+msgid "Moves selected track down one step"
+msgstr "Verschiebt ausgewählten Track eins nach unten"
+
+#: src/audio.c:321 src/rip_audio.c:667
+msgid "Dump CD"
+msgstr "Audio-Tracks lesen"
+
+#: src/audio.c:322
+msgid "Dumps content of an audio CD into sound wav files (using icedax)."
+msgstr "Liest Audiodaten einer CD in .wav Dateien (mit icedax)."
+
+#: src/audio.c:339
+msgid "Track"
+msgstr "Track"
+
+#: src/audio.c:340 src/filepicker.c:157
+msgid "Size (MB)"
+msgstr "Größe (MB)"
+
+#: src/audio.c:362
+msgid "Total size: 0 MB (/783) Sectors: 150 (/333000) Time: (00:00)"
+msgstr "Gesamtgröße: 0 MB (/783) Sectoren: 150 (/333000) Zeit: (00:00)"
+
+#: src/cdlabel.c:369
+msgid "cdlabelgen interface"
+msgstr "Interface zu cdlabelgen"
+
+#: src/cdlabel.c:386
+msgid "Get data"
+msgstr "Daten übernehmen"
+
+#: src/cdlabel.c:392
+msgid "Add data selection as label"
+msgstr "Übernimmt Dateienauswahl (Daten) als Inhalt"
+
+#: src/cdlabel.c:394
+msgid "Get audio"
+msgstr "Audio übernehmen"
+
+#: src/cdlabel.c:400
+msgid "Add audio selection as label"
+msgstr "Übernimmt Dateienauswahl (Audio) als Inhalt"
+
+#: src/cdlabel.c:402
+msgid "Get dir"
+msgstr "Verzeichnis übernehmen"
+
+#: src/cdlabel.c:408
+msgid "Add a directory content as label"
+msgstr "Übernimmt Dateien eines Verzeichnisses als Inhalt"
+
+#.
+#: src/cdlabel.c:434
+msgid "Cover label options"
+msgstr "Cover-Label-Optionen"
+
+#: src/cdlabel.c:445
+msgid "Category:     "
+msgstr "Kategorie:   "
+
+#: src/cdlabel.c:457
+msgid "Sub-category:"
+msgstr "Unterkategorie:"
+
+#: src/cdlabel.c:469
+msgid "No date"
+msgstr "Kein Datum"
+
+#: src/cdlabel.c:474
+msgid "Don't print date on cover"
+msgstr "Kein Datum auf das Cover drucken"
+
+#: src/cdlabel.c:476
+msgid "Date"
+msgstr "Datum"
+
+#: src/cdlabel.c:481
+msgid "Print date on cover"
+msgstr "Datum auf das Cover drucken"
+
+#: src/cdlabel.c:487
+msgid "If nothing is entered, today's date will be used"
+msgstr "Wenn hier nichts eingegeben ist wird das heutige Datum benutzt"
+
+#: src/cdlabel.c:494
+msgid "No plaque"
+msgstr "Kein Banner"
+
+#: src/cdlabel.c:498
+msgid ""
+"Suppresses printing of the Plaque (the category/sub-category banner)on the "
+"tray card, thus allowing you to fit even more items on the tray card.(needs "
+"cdlabelgen 1.5 or newer)"
+msgstr ""
+"Unterdrückt das Banner (Kategorie/Unterkategorie) auf der Traycard, damit "
+"ist mehr Platz für Text (benötigt cdlabelgen 1.5.0 oder neuer)"
+
+#: src/cdlabel.c:503
+msgid "Enable word wrapping"
+msgstr "Zeilenumbruch erlauben"
+
+#: src/cdlabel.c:507
+msgid ""
+"Enables word wrapping of the items that print on the tray card.(needs "
+"cdlabelgen 1.5 or newer)"
+msgstr ""
+"Erlaubt Zeilenumbruch in den Texten auf der Traycard. (benötigt cdlabelgen "
+"1.5.0 oder neuer)"
+
+#.
+#: src/cdlabel.c:511
+msgid "EPS-file options"
+msgstr "EPS-Datei-Optionen"
+
+#: src/cdlabel.c:522
+msgid "Cover EPS file"
+msgstr "Cover-EPS-Datei"
+
+#: src/cdlabel.c:526
+msgid "Add an EPS (Encapsulated PostScript) file to the cover"
+msgstr "Drucke eine EPS-(encapsulated postscript) Datei auf das Cover"
+
+#: src/cdlabel.c:535
+msgid ""
+"The ratio by which you want to scale the EPS file that appears on the cover"
+msgstr "Verhältnis um das die EPS-Datei auf dem Cover skaliert wird"
+
+#: src/cdlabel.c:539 src/cdlabel.c:582
+msgid "Scale:"
+msgstr "Skalierfaktor:"
+
+#: src/cdlabel.c:547 src/cdlabel.c:590 src/cdlabel.c:615
+msgid "Pick file:"
+msgstr "Datei auswählen:"
+
+#: src/cdlabel.c:553
+msgid "Select cover EPS file"
+msgstr "Cover-EPS-Datei auswählen"
+
+#: src/cdlabel.c:559
+msgid "Path to cover EPS file"
+msgstr "Pfad der Cover-eps-Datei"
+
+#: src/cdlabel.c:565
+msgid "Tray EPS file"
+msgstr "Tray-EPS-Datei"
+
+#: src/cdlabel.c:569
+msgid "Add an EPS (Encapsulated PostScript) file to the tray card"
+msgstr "Drucke eine EPS-(encapsulated postscript) Datei auf die Traycard"
+
+#: src/cdlabel.c:578
+msgid ""
+"The ratio by which you want to scale the EPS file that appears on the tray "
+"card"
+msgstr "Verhältnis um das die EPS-Datei auf der Traycard skaliert wird"
+
+#: src/cdlabel.c:596
+msgid "Select tray card EPS file"
+msgstr "Traycard-EPS-Datei auswählen"
+
+#: src/cdlabel.c:602
+msgid "Path to tray card EPS file"
+msgstr "Pfad der Traycard-EPS-Datei"
+
+#.
+#: src/cdlabel.c:604
+msgid "Make cover"
+msgstr "Label erzeugen"
+
+#: src/cdlabel.c:621
+msgid "Select file to print to, if it exists it will be overwritten."
+msgstr ""
+"Datei in die gedruckt wird auswählen, wird überschrieben falls sie existiert."
+
+#: src/cdlabel.c:628
+msgid ""
+"File to print to, if no file is selected, gcombust will create a temporary "
+"file and delete it afterwards"
+msgstr ""
+"Datei in die gedruckt wird, wenn keine ausgewählt ist wird eine "
+"Temporärdatei erzeugt und hinterher wieder gelöscht"
+
+#: src/cdlabel.c:636
+msgid "Save to file"
+msgstr "Erzeuge Druckdatei"
+
+#: src/cdlabel.c:642
+msgid "Save cover as a PS file"
+msgstr "Erzeuge eine PS-Druckdatei"
+
+#: src/cdlabel.c:644
+msgid "Preview"
+msgstr "Vorschau"
+
+#: src/cdlabel.c:650
+msgid "Preview the cover with gv"
+msgstr "Vorschau der Druckdatei mit gv"
+
+#: src/cdlabel.c:652 src/cdlabel.c:666
+msgid "Print"
+msgstr "Drucken"
+
+#: src/cdlabel.c:658
+msgid "Print cover with lpr"
+msgstr "Datei drucken mit lpr"
+
+#. notebook labels
+#: src/cdlabel.c:662
+msgid "Items"
+msgstr "Einträge"
+
+#: src/cdrecord_options.c:63
+msgid ""
+" The supplied image name is a directory, \n"
+" please fill in the full path/image name in the image location field. \n"
+msgstr ""
+" Der angegebene Image-Name ist ein Verzeichnis, \n"
+" bitte geben Sie den kompletten Pfad/Image-Namen im Image-Location Feld an.\n"
+
+#: src/cdrecord_options.c:113
+msgid "Please choose image location:"
+msgstr "Verzeichnis auswählen"
+
+#: src/cdrecord_options.c:132
+msgid "Data Source"
+msgstr "Daten-Quelle"
+
+#: src/cdrecord_options.c:139
+msgid "Data Files, no image"
+msgstr "Dateien, kein Image"
+
+#: src/cdrecord_options.c:143
+msgid ""
+"Do not make a disk image of the files in Data Files. Pipes output from "
+"genisoimage directly to wodim on the fly."
+msgstr ""
+"Keine Image-Datei aus den ausgewählten Verzeichnissen erzeugen, direkte Pipe "
+"von genisoimage zu wodim."
+
+#: src/cdrecord_options.c:150
+msgid "ISO 9660 Image"
+msgstr "ISO-9660 Image"
+
+#: src/cdrecord_options.c:154
+msgid ""
+"Use a ISO 9660 image to burn from. You can either use an existing image or "
+"make one from the files added to Data Files (safer, using an image can "
+"prevent buffer underruns, but requires enough free disk space)"
+msgstr ""
+"Benutze eine ISO-9660 Image-Datei zum Schreiben, entweder eine vorhandene "
+"oder eine aus den ausgewählten Verzeichnissen erzeugte (sicherer, Benutzung "
+"einer Image-Datei kann Buffer Underruns verhindern, benötigt aber genug "
+"freien Diskplatz)"
+
+#: src/cdrecord_options.c:159
+msgid "Choose image location"
+msgstr "Verzeichnis auswählen"
+
+#: src/cdrecord_options.c:162
+msgid ""
+"Open up a file selector and select the path+name of where you want to make "
+"the image (~650MB of free space required) or the location of an already "
+"existing image."
+msgstr ""
+"Öffnet Verzeichnisauswahl für den Ort der Image-datei (~650MB freier Platz "
+"benötigt) oder den einer schon existierenden Image-Datei."
+
+#: src/cdrecord_options.c:172
+msgid ""
+"This is the path to which the image will be generated or the path to the "
+"image to in case you already have an image"
+msgstr ""
+"Der Pfad wo das Image erzeugt wird (oder gelesen falls schon eins vorhanden "
+"ist)"
+
+#: src/cdrecord_options.c:183
+msgid "Create image from files"
+msgstr "Image aus Dateien erzeugen"
+
+#: src/cdrecord_options.c:186
+msgid "Make the ISO-image to be burned from Data Files"
+msgstr ""
+"Erzeugt die Image-Datei aus den ausgewählten Verzeichnissen, von der später "
+"gebrannt wird"
+
+#: src/cdrecord_options.c:191
+msgid "Read image from CD"
+msgstr "Image von CD lesen"
+
+#: src/cdrecord_options.c:194
+msgid ""
+"Read the ISO-image to be burned from an existing CD-ROM. The image is read "
+"from the device specified in the existing ISO 9660 field below. Some (all?) "
+"IDE burners used with the SCSI emulation layer has problems with this. "
+"Encountering an error the routine will retry 20 times before giving up."
+msgstr ""
+"Liest das zu brennende ISO-Image von einer vorhandenen CD-ROM. Das Image "
+"wird vom in `Vorhandene ISO-9660 CD' unten angegeben Device gelesen. Einige "
+"(alle?) IDE Brenner, die mit der SCSI Emulation benutzt werden, haben "
+"Probleme hiermit. Bei Fehlern versucht die Routine es bis zu 20 mal nochmal."
+
+#: src/cdrecord_options.c:204 src/cdrecord_options.c:236
+msgid "Info"
+msgstr "Info"
+
+#: src/cdrecord_options.c:208
+msgid "Displays verbose information about the ISO 9660 image"
+msgstr "Zeigt zusätzliche Informationen über das ISO-9660-CD-Image an"
+
+#: src/cdrecord_options.c:219
+msgid "Existing ISO 9660 CD"
+msgstr "Vorhandene ISO-9660-CD"
+
+#: src/cdrecord_options.c:223
+msgid "Copy an data CD directly (only works with plain ISO 9660 CDs)"
+msgstr "Kopiert eine Daten CD direkt (funktioniert nur mit Standard ISO-CDs)"
+
+#: src/cdrecord_options.c:231
+msgid "Path to device from which to copy (for example /dev/rcd0a)"
+msgstr "Pfad des Device von dem kopiert werden soll (z.B. /dev/rcd0a)"
+
+#: src/cdrecord_options.c:234
+msgid "Path to device from which to copy (for example /dev/hdb or /dev/cdrom)"
+msgstr ""
+"Pfad des Device von dem kopiert werden soll (z.B. /dev/hdb oder /dev/cdrom)"
+
+#: src/cdrecord_options.c:240
+msgid "Displays verbose information about the ISO 9660 CD"
+msgstr "Zeigt zusätzliche Informationen über die ISO-9660-CD an"
+
+#: src/cdrecord_options.c:250 src/mainwindow.c:120
+msgid "Audio Files"
+msgstr "Audiodateien"
+
+#: src/cdrecord_options.c:254
+msgid ""
+"Make CD-DA (audio CD) based on tracks selected in Audio Files (ie the ripped "
+"tracks on HD)"
+msgstr ""
+"Schreibe CD-DA (Audio CD) von ausgewählten Audiodateien (also die "
+"digitalisierten Tracks als Dateien)"
+
+#: src/cdrecord_options.c:265
+msgid "Existing audio CD"
+msgstr "Vorhandene Audio CD"
+
+#: src/cdrecord_options.c:270
+msgid ""
+"Copy an audio CD directly (on the fly). This is a track-by-track copy, not a "
+"bitwise perfect copy (gaps for one thing aren't preserved exactly). This "
+"feature is experimental."
+msgstr ""
+"Audio CD direkt kopieren (ohne Umweg über .wav Dateien). Dies wird Track-"
+"weise gemacht, ergibt also keine exakte bitweise Kopie (die Länge der Pausen "
+"zwischen den Tracks wird z.B. nicht übernommen). Dieses Feature ist noch im "
+"Teststadium."
+
+#: src/cdrecord_options.c:280 src/rip_audio.c:586
+msgid "Path to device from which to copy (for example 0,6,0)"
+msgstr "Pfad des Device von dem kopiert werden soll (z.B. 0,6,0)"
+
+#: src/cdrecord_options.c:283
+msgid ""
+"Path to device from which to copy (for example for cooked style devices "
+"(plain IDE): /dev/hdb, or for SCSI devices in the \"wodim style\": 0,6,0)"
+msgstr ""
+"Pfad des Device von dem kopiert werden soll (z.B. für \"cooked style\" "
+"devices (normalerweise bei IDE): /dev/hdb, oder für SCSI devices im \"wodim-"
+"Stil\" 0,6,0)"
+
+#: src/cdrecord_options.c:304 src/rip_audio.c:597
+msgid "Speed:"
+msgstr "Geschwindigkeit:"
+
+#: src/cdrecord_options.c:320
+msgid "Grace time:"
+msgstr "Wartezeit"
+
+#: src/cdrecord_options.c:327
+msgid ""
+"Set the grace time before starting the write (the default is 9 seconds, keep "
+"it at that if your wodim version does not understand this option)"
+msgstr ""
+"Stellt die Wartezeit vor dem Start des Brennvorgangs ein (standardmäßig 9 "
+"Sekunden, behalten Sie es bei diesem Wert, wenn Ihre wodim-Version diese "
+"Einstellung nicht versteht)."
+
+#: src/cdrecord_options.c:340
+msgid "Misc options"
+msgstr "Verschiedene Optionen"
+
+#: src/cdrecord_options.c:364 src/preferences.c:326
+msgid "FIFO size: "
+msgstr "FIFO-Größe: "
+
+#: src/cdrecord_options.c:367
+msgid ""
+"Set the FIFO size (default is 4 MB, and it will be used if nothing is "
+"specified) - goes directly to the wodim fs= option so the syntax is the same "
+"as wodim's (e.g. 10x53k == 630 kBytes)"
+msgstr ""
+"Setzt die FIFO-Größe (Standard ist 4 MB, wird benutzt wenn nichts angegeben "
+"ist) - geht direkt in wodims fs= Option, d.h. die Syntax ist die gleiche wie "
+"wodims (z.B. 10x63k = 630 kBytes)"
+
+#: src/cdrecord_options.c:377
+msgid "Dummy test run"
+msgstr "Dummy-Testlauf"
+
+#: src/cdrecord_options.c:381
+msgid ""
+"Go through every step of the recording process, but leave the laser off - "
+"good way to make sure everything is OK and that the system can cope with the "
+"load. (See File/Preferences if you don't want this enabled by default)."
+msgstr ""
+"Geht durch jeden Schritt des Schreibprozesses aber lässt den Laser aus - "
+"gute Möglichkeit sicherzustellen, dass alles OK ist und das System die "
+"Belastung verträgt.(Gehen Sie ins Menü Datei/Voreinstellungen,  wenn dies "
+"nicht standardmäßig aktiviert sein soll)"
+
+#: src/cdrecord_options.c:387
+msgid "Eject target when done"
+msgstr "Schublade öffnen"
+
+#: src/cdrecord_options.c:390
+msgid "Eject the target disk when done, some devices require this."
+msgstr "Öffnet die Schublade wenn fertig, manche Laufwerke benötigen das."
+
+#: src/cdrecord_options.c:393
+msgid "Pad"
+msgstr "Pad"
+
+#: src/cdrecord_options.c:397
+msgid ""
+"For data tracks: Usable if your drive can't read the last sectors of a track "
+"or if you want to be able to read the CD on an old Linux system with the ISO "
+"9660 file system read ahead bug. For audio tracks: All audio data to be a "
+"multiple of 2352 bytes (as it should be). It's safest to leave this on, "
+"especially for audio tracks."
+msgstr ""
+"Für Datentracks: Nützlich wenn ein Laufwerk die letzten Sectoren eines "
+"Tracks nicht lesen kann oder um die CD auf alten Linux Systemen mit ISO-9660 "
+"read ahead bug lesen zu können. Für Audio Tracks: Sorgt dafür dass alle "
+"Tracks ein Vielfaches von 2352 bytes lang sind (wie es sein muss). Es ist am "
+"sichersten dies an zu lassen, besonders für Audio Tracks."
+
+#: src/cdrecord_options.c:403
+msgid "DAO"
+msgstr "DAO"
+
+#: src/cdrecord_options.c:407
+msgid "Set Disk At Once mode - needs an image"
+msgstr "Disk-At-Once-Modus - benötigt ein Image"
+
+#: src/cdrecord_options.c:409 src/preferences.c:303
+msgid "Swab audio"
+msgstr "Swap Audio"
+
+#: src/cdrecord_options.c:413 src/preferences.c:308
+msgid "Assume audio data is in byte-swapped (little-endian) order"
+msgstr "Nimmt an, die Audio-Daten sind byte-vertauscht (little-endian)"
+
+#: src/cdrecord_options.c:416
+msgid "overburn"
+msgstr "überbrennen"
+
+#: src/cdrecord_options.c:420
+msgid ""
+"Allow wodim to write more than the official size of a medium. Most CD "
+"recorders only do overburning in DAO mode, and there is no guarantee that "
+"your drive supports overburning at all."
+msgstr ""
+"Erlaubt wodim, mehr als die offizielle Größe eines Mediums zu schreiben. Die "
+"meisten Brenner unterstützen Überbrennen nur im DAO-Modus, und es gibt keine "
+"Garantie, dass Ihr Laufwerk es überhaupt unterstützt."
+
+#: src/cdrecord_options.c:429
+msgid "Get size"
+msgstr "Größe übergeben"
+
+#: src/cdrecord_options.c:434
+msgid ""
+"When burning on the fly, some drives need to know the size of the track "
+"before starting. Enable this option if your drive requires this. If burning "
+"in DAO mode on-the-fly all drives must also use this option (enabled "
+"automatically in this case)."
+msgstr ""
+"Manche CD-Schreiber benötigen die Größe des Tracks bevor sie mit dem "
+"Schreiben beginnen. Bitte einschalten wenn ihr Laufwerk dies benötigt. Wenn "
+"im DAO Modus ohne Image-Datei geschrieben wird benötigen alle Laufwerke dies "
+"(wird dann automatisch eingeschaltet)."
+
+#: src/cdrecord_options.c:440 src/preferences.c:448
+msgid "Burnproof"
+msgstr "Prüfen beim Brennen"
+
+#: src/cdrecord_options.c:445
+msgid ""
+"Use Buffer Underrun Proof writing. Only for drives that use the Sanyo BURN "
+"Proof technology."
+msgstr ""
+"Verwende die Buffer-Underrun Prüfung beim Schreiben. Dies wird nur von "
+"Laufwerken unterstützt, die die \"BURN Proof\" Technologie von Sanyo nutzen."
+
+#: src/cdrecord_options.c:448 src/preferences.c:455
+msgid "Disable fixate"
+msgstr "Deaktiviere Abschließen"
+
+#: src/cdrecord_options.c:453
+msgid ""
+"Do not fixate the disk after writing the tracks. You have to manually fixate "
+"the CD afterwards."
+msgstr ""
+"Schließe die CD nicht nach dem Schreiben der Tracks ab. Sie müssen die CD "
+"danach manuell abschließen."
+
+#: src/cdrecord_options.c:492
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: src/cdrecord_options.c:499
+msgid "Blank type:"
+msgstr "Löschtyp:"
+
+#: src/cdrecord_options.c:503
+msgid "all"
+msgstr "Komplett"
+
+#: src/cdrecord_options.c:505
+msgid "Blank the entire disk. This may take a long time."
+msgstr "Komplette CD löschen. Dies kann lange dauern."
+
+#: src/cdrecord_options.c:509
+msgid "fast"
+msgstr "Schnell"
+
+#: src/cdrecord_options.c:511
+msgid "Minimally blank the disk (erases PMA, TOC and pregap)."
+msgstr "Minimales Löschen der CD (PMA, TOC und pregap)."
+
+#: src/cdrecord_options.c:515
+msgid "Blank CD"
+msgstr "CD löschen"
+
+#: src/cdrecord_options.c:516
+msgid "Blank the CD-RW (note that the Misc options above apply here, too)"
+msgstr ""
+"Löscht eine CD-RW (s. auch die Einstellungen unter `Verschiedene Optionen')"
+
+#: src/cdrecord_options.c:523
+msgid "force"
+msgstr "erzwingen"
+
+#: src/cdrecord_options.c:528
+msgid ""
+"Force to continue on some errors. wodim will do some tricks in order to try "
+"to allow you to blank bad CD-RW disks. You should probably use the \"all\" "
+"blanking method when using this option. Use this option only when you have "
+"trouble blanking some media!"
+msgstr ""
+"Erzwingt das Fortfahren bei einigen Fehlern. wodim wird einige Tricks "
+"versuchen, damit sie schlechte CD-RWs löschen können. Sie sollten "
+"möglicherweise die \"komplett\"-Methode in Verbindung mit dieser Option "
+"verwenden. Verwenden Sie diese Option nur, wenn Sie Schwierigkeiten beim "
+"Löschen einiger Medien haben!"
+
+#: src/cdrecord_options.c:575
+#, c-format
+msgid "Error accessing the image file (%s), it does not seem to exist."
+msgstr ""
+"Fehler beim Zugriff auf die Image-Datei (%s), sie scheint nicht zu "
+"existieren."
+
+#: src/cdrecord_options.c:580
+msgid ""
+"You are trying to burn a directory, please fill in the full path/image name "
+"in the image location field."
+msgstr ""
+"Sie versuchen ein Verzeichnis zu brennen. Bitte geben Sie den kompletten "
+"Pfad/Image-Namen im Image-Location Feld an."
+
+#: src/cdrecord_options.c:669
+msgid " Combust! "
+msgstr " Brennen! "
+
+#: src/cdrecord_options.c:670
+msgid "Start burning"
+msgstr "Brennprozess starten"
+
+#: src/cdrecord_options.c:680
+msgid " Export combust command "
+msgstr "Exportiere Brennkommando"
+
+#: src/cdrecord_options.c:681
+msgid ""
+"Export the command gcombust would execute to a shell script. Can be useful "
+"if you don't want to use X Windows burn at the same time."
+msgstr ""
+"Exportiere das Kommando, das gcombust ausführen würde, als Shell-Script. Das "
+"kann nützlich sein, wenn sie nicht unter X Windows brennen wollen."
+
+#: src/clist_common.c:42
+msgid "Please select file to add:"
+msgstr "Bitte Datei zum Hinzufügen auswählen"
+
+#: src/command.c:56
+msgid "Nothing to burn - no audio tracks selected."
+msgstr "Nichts zu brennen - keine Audio-Tracks ausgewählt."
+
+#: src/command.c:135
+msgid ""
+"Please note that you have the dummy option enabled: you are starting a test "
+"run."
+msgstr ""
+"Bitte beachten Sie, dass Sie einen Testlauf machen, wenn Sie die Dummy-"
+"Einstellung aktiviert haben."
+
+#: src/command.c:213
+msgid ""
+"No image is selected, but the use image button is checked.\n"
+" Please select an image."
+msgstr ""
+"Kein Image ausgewählt aber `Image erzeugen' ist aktiviert.\n"
+" Bitte ein Image auswählen."
+
+#: src/command.c:231
+msgid "Could not retrieve image size, aborting burn."
+msgstr "Konnte Imagegröße nicht bestimmen, Abbruch."
+
+#: src/command.c:249
+msgid ""
+"No in-device entered, but the copy existing ISO 9660CD option is enabled.\n"
+" Please enter a valid device."
+msgstr ""
+"Kein Quelldevice angegeben aber `ISO CD kopieren' ausgewählt.\n"
+" Bitte Device angeben."
+
+#: src/command.c:539
+msgid "You haven't selected any files to make an image from!"
+msgstr "Keine Dateien für Image-Datei ausgewählt!"
+
+#: src/command.c:547
+msgid ""
+" You selected to make an image but you \n"
+" haven't selected the filename of the image \n"
+" you wish to make! "
+msgstr ""
+" `Image-Datei erzeugen' ausgewählt aber \n"
+" kein Dateiname für die Image-Datei ausgewählt!"
+
+#: src/command.c:626
+msgid "You need to supply a device name to read audio tracks from."
+msgstr "Um Audio-Tracks lesen zu können, muss ein Device angegeben sein."
+
+#: src/command.c:748
+msgid "Could not read number of tracks from audio CD"
+msgstr "Kann Anzahl der Tracks der Audio-CD nicht lesen"
+
+#: src/common_gtk.c:71 src/detect_scsi.c:137 src/detect_scsi.c:245
+#: src/menu.c:174
+msgid "OK"
+msgstr "OK"
+
+#: src/common_gtk.c:141
+msgid "CD-Recorder device options"
+msgstr "CD-Laufwerks-Optionen"
+
+#: src/common_gtk.c:155
+msgid "Lun:"
+msgstr "Lun:"
+
+#: src/common_gtk.c:161
+msgid "Target:"
+msgstr "Target:"
+
+#: src/common_gtk.c:167
+msgid "SCSI-bus:"
+msgstr "SCSI-Bus:"
+
+#: src/common_gtk.c:180 src/common_gtk.c:193 src/common_gtk.c:206
+msgid "See /sbin/dmesg and man wodim"
+msgstr "Siehe /sbin/dmesg und man wodim"
+
+#: src/common_gtk.c:183 src/common_gtk.c:196 src/common_gtk.c:209
+msgid "See /proc/scsi/scsi and man wodim"
+msgstr "Siehe /proc/scsi/scsi und man wodim"
+
+#: src/common_gtk.c:214
+msgid "Advanced: override wodim defaults"
+msgstr "Speziell: andere wodim Voreinstellungen"
+
+#: src/common_gtk.c:225 src/rip_audio.c:579
+msgid "Device:"
+msgstr "Device:"
+
+#: src/common_gtk.c:233
+msgid ""
+"SCSI target for the CD recorder. If this is non-empty it is used instead of "
+"the SCSI-bus/target/lun above. (example: /dev/sga)"
+msgstr ""
+"SCSI-Target für den CD Schreiber. Wenn hier etwas eingetragen ist wird es "
+"anstelle der SCSI-Bus/target/lun Einstellung oben genommen. (Beispiel: /dev/"
+"sga)"
+
+#: src/common_gtk.c:237
+msgid "Driver:"
+msgstr "Treiber:"
+
+#: src/common_gtk.c:245
+msgid ""
+"Tell wodim to use a specific driver. This should usually be left empty "
+"unless you know what you are doing (try man wodim and wodim driver=help)."
+msgstr ""
+"Gibt einen bestimmten Treiber für wodim vor. Dies sollte man nur benutzen "
+"wenn man weiss was man tut (s. man wodim and wodim -driver=help)."
+
+#: src/common_gtk.c:253
+msgid "Check SCSI settings"
+msgstr "SCSI-Einstellungen überprüfen"
+
+#: src/common_gtk.c:257
+msgid "Checks if a driver for the selected drive is present"
+msgstr "Testet ob ein Treiber für das ausgewählte Laufwerk vorhanden ist"
+
+#: src/common_gtk.c:265
+msgid "Detect SCSI drive"
+msgstr "SCSI Laufwerk erkennen"
+
+#: src/common_gtk.c:268
+msgid ""
+"Automatically locates your drive, press multiple times to cycle through SCSI "
+"devices if you have more than one"
+msgstr ""
+"Sucht das Laufwerk auf dem SCSI-Bus (den SCSI-Bussen), evtl. mehrfach "
+"anklicken wenn mehrere Laufwerke vorhanden sind"
+
+#: src/common_gtk.c:279
+msgid "Reset drive"
+msgstr "SCSI-Reset"
+
+#: src/common_gtk.c:282
+msgid "Try to reset the SCSI bus where the CD recorder is located"
+msgstr "Versucht den SCSI-Bus neu zu starten an dem der CD-Brenner hängt"
+
+#: src/config_files.c:384
+msgid ""
+" Could not open config file.\n"
+" Please configure gcombust in the File/Preferences menu \n"
+" (Preferences window opened, at least the path to \n"
+" genisoimage need to be filled in) "
+msgstr ""
+" Konnte Konfigurationsdatei nicht öffnen.\n"
+" Bitte gcombust im Menü Datei/Voreinstellungen konfigurieren.\n"
+" (Voreinstellungs-Fenster geöffnet, mindestens die Pfade zu \n"
+" genisoimage oder mkhybrid müssen ausgefüllt werden)"
+
+#: src/config_files.c:432
+msgid " Could not open config file for writing! \n"
+msgstr " Konnte Konfigurationsdatei nicht zum schreiben öffnen! \n"
+
+#: src/detect_scsi.c:97 src/detect_scsi.c:113
+msgid " Could not detect if swab is to be used or not. "
+msgstr " Konnte nicht erkennen ob swab (Byteswap) benötigt wird oder nicht. "
+
+#: src/detect_scsi.c:128
+msgid ""
+"wodim failed to recognize selected drive\n"
+"(wrong SCSI settings or no permission to device)!"
+msgstr ""
+"wodim konnte das ausgewählte Laufwerk nicht erkennen\n"
+"(falsche SCSI-Einstellungen oder Zugriffsrechte für das Device)!"
+
+#: src/detect_scsi.c:131
+msgid "    Settings OK!    "
+msgstr "  Einstellungen OK!  "
+
+#: src/detect_scsi.c:235
+msgid ""
+"wodim failed to reset selected drive\n"
+"(wrong SCSI settings, no permission to device or\n"
+"the device did not accept the reset sequence)!"
+msgstr ""
+"wodim konnte das ausgewählte Laufwerk nicht zurücksetzen\n"
+"(falsche SCSI-Einstellungen, keine Rechte für das Device oder\n"
+"das Laufwerk erkannte die Reset Sequenz nicht)!"
+
+#: src/detect_scsi.c:239
+msgid "Device successfully reset"
+msgstr "Laufwerk erfolgreich zurückgesetzt"
+
+#: src/extra_options.c:113 src/extra_options.c:159
+msgid "Del"
+msgstr "Lö."
+
+#: src/extra_options.c:114 src/extra_options.c:160
+msgid "Remove selected option"
+msgstr "Entferne ausgewählte Option"
+
+#: src/extra_options.c:118
+msgid ""
+"Additional flags to wodim Here you can specify custom flags to wodim not "
+"available directly through gcombust. Write a flag in the text entry, and "
+"press return to add it. Due to implementation details and lack of time on "
+"gcombust author's part, it is possible that you have to specify flags "
+"containing spaces as separate entries."
+msgstr ""
+"Zusätzliche Parameter für wodim. Hier können Sie nutzerspezifische Parameter "
+"an wodim eintragen, die nicht direkt durch die Oberfläche eingestellt werden "
+"können. Schreiben Sie einen Parameter in das Eingabefeld und drücken sie "
+"'Enter' um es hinzuzufügen. Wegen Implementierungsdetails und Zeitmangel "
+"seitens des Autors von gcombust ist es möglich, dass Sie Parameter, die "
+"Leerzeichen enthalten, separat eingeben müssen."
+
+#: src/extra_options.c:132
+msgid "Custom wodim options:"
+msgstr "angepasste wodim-Optionen:"
+
+#: src/extra_options.c:146
+msgid ""
+"Additional flags to genisoimage. Here you can specify custom flags to "
+"genisoimage not available directly through gcombust. Write a flag in the "
+"text entry, and press return to add it. Due to implementation details and "
+"lack of time on gcombust author's part, it is likely that you have to "
+"specify flags containing spaces as separate entries. For example, to add the "
+"flag \"-jcharset cp866\", first add -jcharset, then cp866."
+msgstr ""
+"Zusätzliche Parameter für genisoimage. Hier können Sie nutzerspezifische "
+"Parameter an mkisofs eintragen, die nicht direkt durch die Oberfläche "
+"eingestellt werden können. Schreiben Sie einen Parameter in das Eingabefeld "
+"und drücken sie 'Enter' um es hinzuzufügen. Wegen Implementierungsdetails "
+"und Zeitmangel seitens des Autors von gcombust ist es möglich, dass Sie "
+"Parameter, die Leerzeichen enthalten, separat eingeben müssen. Um "
+"beispielsweise den Parameter \"-jcharset cp866\" anzugeben, fügen sie erst -"
+"jcharset und dann cp866 hinzu."
+
+#: src/filepicker.c:110
+msgid "Add directory"
+msgstr "Verzeichnis hinzufügen"
+
+#: src/filepicker.c:111
+msgid ""
+"Opens file selector to let you add a file or directory. If you want to add "
+"an entry starting with . (dot), write a . in the name selection field of the "
+"file selector and press TAB"
+msgstr ""
+"Öffnet Dateiauswahl um eine Datei oder ein Verzeichnis hinzuzufügen. Um "
+"einen Eintrag der mit einem . (Punkt) beginnt hinzuzufügen einen . ins "
+"Selection Feld schreiben und TAB drücken"
+
+#: src/filepicker.c:117
+msgid "Deletes the selected files/directories"
+msgstr "Löscht die ausgewählten Dateien/Verzeichnisse"
+
+#: src/filepicker.c:120
+msgid "Select all"
+msgstr "Alles auswählen"
+
+#: src/filepicker.c:121
+msgid "Selects all files/directories"
+msgstr "Alle Dateien/Verzeichnisse auswählen"
+
+#: src/filepicker.c:124
+msgid "Unselect all"
+msgstr "Auswahl zurücknehmen"
+
+#: src/filepicker.c:125
+msgid "Unselects all files/directories"
+msgstr "Auswahl aller Dateien/Verzeichnisse zurücknehmen"
+
+#: src/filepicker.c:156
+msgid "File"
+msgstr "Datei"
+
+#: src/filepicker.c:188
+msgid ""
+"Sectors:      0\n"
+"Size:   0.0 MB"
+msgstr ""
+"Sectoren:     0\n"
+"Größe:   0.0 MB"
+
+#: src/filepicker.c:193
+msgid "Update size estimate"
+msgstr "Größenschätzung aktualisieren"
+
+#: src/filepicker.c:201
+msgid "Follow syml"
+msgstr "Folge Symlinks"
+
+#: src/filepicker.c:206
+msgid "Follow symbolic links when creating the image"
+msgstr "Folge symbolischen Links bei der Erzeugung der Image-Datei"
+
+#: src/filepicker.c:213
+msgid "Include dir name"
+msgstr "Verzeichnisse hinzufügen"
+
+#: src/filepicker.c:218
+msgid ""
+"Include the directory names on the top of the image (if this option is "
+"disabled the _contents_ of the directories added will appear at the root). "
+"NOTE: this option currently has no effect when making sessions in multi "
+"session mode."
+msgstr ""
+"Füge die Namen der Verzeichnisse in der Root der CD hinzu (wenn diese Option "
+"aus ist erscheinen die _Inhalte_ der Verzeichnisse in der Root). Achtung: "
+"diese Option hat im Moment keinen Effekt bei Erzeugung von Sessions im "
+"Multisession Modus."
+
+#: src/filepicker.c:229
+msgid "Include all"
+msgstr "Alle Dateien"
+
+#: src/filepicker.c:233
+msgid ""
+"Include all files on the ISO 9660 file system; if turned off, filenames "
+"containing ~ or # or ending with .bak are excluded"
+msgstr ""
+"Alle Dateien in das ISO-9660-Dateisystem einbinden; wenn diese Option "
+"ausgeschaltet ist, werden Dateien mit ~ oder # im Dateinamen oder mit der "
+"Endung .bak ignoriert"
+
+#: src/filepicker.c:244
+msgid "Default pathlevel:"
+msgstr "Vorgegebene Pfadebene"
+
+#: src/filepicker.c:254
+msgid ""
+"Number of pathcomponents to ignore/include by default (depends on "
+"radiobutton setting bellow). Note that this option takes effect only at the "
+"time you add files/directories (e.g., add a file, change it to 2 and add "
+"another file and you will see the difference)."
+msgstr ""
+"Anzahl von Pfadkomponenten, die standardmäßig ignoriert bzw. eingefügt "
+"werden sollen (hängt vom Radio-Knopf unten ab). Diese Einstellung wirkt nur "
+"beim Hinzufügen von Dateien oder Verzeichnissen (Fügen Sie z.B. eine Datei "
+"hinzu, ändern Sie den Wert auf 2 und fügen Sie noch eine Datei hinzu, Sie "
+"werden den Unterschied sehen)."
+
+#: src/filepicker.c:261
+msgid " levels"
+msgstr "Ebenen"
+
+#: src/filepicker.c:267
+msgid "Ignore from start"
+msgstr "Ignoriere vom Anfang"
+
+#: src/filepicker.c:270
+msgid "Strip N leading pathcomponents from the paths added"
+msgstr "Entferne N führende Pfadelemente von den zugefügten Pfaden"
+
+#: src/filepicker.c:274
+msgid "Include from end"
+msgstr "Schließe vom Ende ein"
+
+#: src/filepicker.c:277
+msgid ""
+"Include N pathcomponents from the paths added (1 is the default behaviour, 0 "
+"means include all)"
+msgstr ""
+"Schließe N Pfadelemente von den zugefügten Pfaden ein (1 ist das "
+"Standardverhalten, bei 0 werden alle eingeschlossen)."
+
+#: src/filepicker.c:345
+msgid "Add pattern:"
+msgstr "Pattern einfügen"
+
+#: src/filepicker.c:351
+msgid "Add a pattern to be excluded (*.o)"
+msgstr "Wildcard pattern wegzulassender Dateien (z.B. *.o)"
+
+#: src/filepicker.c:356
+msgid "Delete pattern"
+msgstr "Pattern löschen"
+
+#: src/filepicker.c:502
+msgid "Rename"
+msgstr "Umbenennen"
+
+#: src/gcombust.c:64
+#, c-format
+msgid ""
+"Usage: gcombust [OPTION]\n"
+"-h --help\t\tdisplay this help and exit\n"
+"-l --load-selection\tload saved selection from file\n"
+"-v --version\t\tdisplay version information and exit\n"
+msgstr ""
+"Verwendung: gcombust [OPTION]\n"
+"-h --help            Diese Hilfe Anzeigen und Beenden\n"
+"-l --load-selection  Gespeicherte Auswahl aus Datei Laden\n"
+"-v --version         Version Anzeigen und Beenden\n"
+
+#: src/gcombust.c:79
+#, c-format
+msgid "See \"gcombust --help\" for more information\n"
+msgstr "Siehe \"gcombust --help\" für weitere Informationen\n"
+
+#: src/mainwindow.c:110
+msgid "Options"
+msgstr "Optionen"
+
+#: src/mainwindow.c:115
+msgid "Data Files"
+msgstr "Datenverzeichnisse"
+
+#: src/mainwindow.c:125
+msgid "Burn"
+msgstr "Brennen"
+
+#: src/mainwindow.c:130
+msgid "Output"
+msgstr "Ausgabe"
+
+#: src/mainwindow.c:135 src/verify.c:375
+msgid "Verify"
+msgstr "Verifizieren"
+
+#: src/menu.c:51
+msgid "/_File"
+msgstr "/_Datei"
+
+#: src/menu.c:52
+msgid "/File/_Print cover"
+msgstr "/Datei/_Coverdruck"
+
+#: src/menu.c:53
+msgid "/File/P_references..."
+msgstr "/Datei/_Voreinstellungen..."
+
+#: src/menu.c:54 src/menu.c:57
+msgid "/File/sep"
+msgstr "/Datei/sep"
+
+#: src/menu.c:55
+msgid "/File/_Eject CD-R"
+msgstr "/Datei/CD-R _Auswerfen"
+
+#: src/menu.c:56
+msgid "/File/_Close CD-R"
+msgstr "/Datei/CD-R _Schließen"
+
+#: src/menu.c:58
+msgid "/File/_Quit"
+msgstr "/Datei/_Beenden"
+
+#: src/menu.c:59
+msgid "/File selection"
+msgstr "/Daten_auswahl"
+
+#: src/menu.c:60
+msgid "/File selection/_Load selection"
+msgstr "/Datenauswahl/Auswahl _laden"
+
+#: src/menu.c:62 src/menu.c:67
+msgid "/File selection/sep"
+msgstr "/Datenauswahl/sep"
+
+#: src/menu.c:63
+msgid "/File selection/_Save data selection"
+msgstr "/Datenauswahl/Dateiauswahl sichern"
+
+#: src/menu.c:65
+msgid "/File selection/_Save data selection as..."
+msgstr "/Datenauswahl/Dateiauswahl sichern als..."
+
+#: src/menu.c:68
+msgid "/File selection/Save audio selection"
+msgstr "/Datenauswahl/Audioauswahl sichern"
+
+#: src/menu.c:70
+msgid "/File selection/Save audio selection as..."
+msgstr "/Datenauswahl/Audioauswahl sichern als..."
+
+#: src/menu.c:72
+msgid "/_Help"
+msgstr "/_Hilfe"
+
+#: src/menu.c:73
+msgid "/Help/_About"
+msgstr "/Hilfe/_Über"
+
+#: src/menu.c:134
+msgid ""
+"Something (genisoimage or wodim) is still running,\n"
+"are you really sure you want to exit?"
+msgstr ""
+"Ein Programm (genisoimage oder wodim) läuft noch,\n"
+"trotzdem beenden?"
+
+#: src/menu.c:139 src/progressbars_gui.c:178
+msgid "Yes"
+msgstr "Ja"
+
+#: src/menu.c:142 src/progressbars_gui.c:182
+msgid "No"
+msgstr "Nein"
+
+#: src/modify_file_set.c:51
+msgid "Sectors: "
+msgstr "Sectoren: "
+
+#: src/modify_file_set.c:56
+msgid ""
+"\n"
+"Size: "
+msgstr ""
+"\n"
+"Größe: "
+
+#: src/modify_file_set.c:94
+#, c-format
+msgid ""
+"%s\n"
+"\n"
+" The following command was executed when the error occurred: \n"
+"%s"
+msgstr ""
+"%s\n"
+"\n"
+" Das folgende Kommando wurde ausgeführt als der Fehler passierte: \n"
+"%s"
+
+#: src/modify_file_set.c:109
+msgid ""
+" genisoimage received arguments it did not understand, \n"
+" maybe you are using too old a version of genisoimage? "
+msgstr ""
+" genisoimage empfing Argumente die es nicht verstand,\n"
+" vielleicht benutzen Sie eine zu alte Version von genisoimage?"
+
+#: src/modify_file_set.c:112
+msgid " genisoimage detected an invalid filename in the list "
+msgstr " genisoimage hat einen ungültigen Dateinamen in der Liste gefunden."
+
+#: src/modify_file_set.c:114
+msgid ""
+" HFS volume size must be >= 800K - file/dir size too small (the size \n"
+" estimate might be a little bit wrong), add more files before burning "
+msgstr ""
+" HFS-Volume-Größe muss >= 800K sein - Datei/Verzeichnis zu klein, die \n"
+" Größenschätzung kann etwas abweichend sein, vor dem Schreiben mehr \n"
+" Daten hinzufügen "
+
+#: src/modify_file_set.c:118
+msgid ""
+" genisoimage failed to sort directory, (maybe a problem with multi "
+"session, \n"
+" try enabling the No RR option if multi session is used). It it also "
+"possible \n"
+" that there is a duplicate filename in the list, if so, please rename it. \n"
+" It is also quite possible that there is a bug in genisoimage. "
+msgstr ""
+" genisoimage konnte das Verzeichnis nicht sortieren (evtl. ein\n"
+" Problem mit Multisession, versuchen Sie, die Option \"Kein Rock Ridge\" zu\n"
+" aktivieren, falls es ein Multisession-CD ist) Möglicherweise gibt es\n"
+"auch doppelte Dateinamen in der\n"
+" Liste. Wenn dies der Fall ist, benennen Sie diese bitte um. Es könnte\n"
+"auch ein Fehler in genisoimage sein."
+
+#: src/modify_file_set.c:125
+msgid ""
+" Joliet tree sort failed - maybe the image contains \n"
+" a filename-component longer than 64 characters? "
+msgstr ""
+"Joliet fehlgeschlagen, vielleicht enthält das Image einen Dateinamen länger "
+"als 64 Zeichen?"
+
+#: src/modify_file_set.c:152
+msgid " The command could not be executed. "
+msgstr " Das Kommando konnte nicht ausgeführt werden. "
+
+#: src/modify_file_set.c:165
+msgid " EOF reached reading genisoimage size output "
+msgstr " Dateiende beim Lesen der genisoimage-Größenausgabe erreicht "
+
+#: src/modify_file_set.c:169
+msgid " error reading genisoimage size output "
+msgstr " Fehler beim Lesen der genisoimage-Größenausgabe "
+
+#: src/modify_file_set.c:185
+msgid ""
+" There were and unrecognized error with genisoimage when calculating the "
+"size; \n"
+" perhaps your genisoimage is too old for gcombust? "
+msgstr ""
+" Es gab einen unerkannten Fehler bei der Berechnung der Größe durch "
+"genisoimage;\n"
+" eventuell ist Ihr genisoimage zu alt für gcombust? "
+
+#: src/modify_file_set.c:341
+msgid "You tried to add a duplicate file/dir to the file list!"
+msgstr "Versuch, eine doppelte Datei/Verzeichnis hinzuzufügen!"
+
+#: src/multisession.c:60
+msgid "Multi Session"
+msgstr "Multisession"
+
+#: src/multisession.c:67
+msgid "multi session"
+msgstr "multisession"
+
+#: src/multisession.c:70
+msgid ""
+"Make multi session image (appends new image to old image) - first additional "
+"session will waste about 22 MB, subsequent sessions about 13 MB in overhead. "
+"NOTE: currently directories in the old sessions gets completely overwritten "
+"when a new dir with the same name in a new session is added (ie the files "
+"inside it not in the new session \"disappears\") (some OSes allow you to "
+"mount individual sessions).\n"
+" * * * NOTE * * *\n"
+"It seems like multisession doesn't work in gcombust at the moment!!!\n"
+msgstr ""
+"Erzeugt Multisession-Image (hängt neues Image an altes an) - die erste "
+"zusätzliche Session verbraucht zusätzlich ca. 22 MB, weitere je ca. 13 MB "
+"Overhead. Achtung: Verzeichnisse in alten Sessions werden komplett "
+"überschrieben wenn ein Verzeichnis mit gleichem Namen in einer neuen Session "
+"hinzugefügt wird (d.h. Dateien darin, die nicht in der neuen Session sind "
+"`verschwinden') (manche OS können direkt einzelne Sessions mounten.)\n"
+"* * * Achtung * * *\n"
+"Multisession scheint in gcombust momentan nicht zu funktionieren!\n"
+
+#: src/multisession.c:81
+msgid "Use data"
+msgstr "Daten benutzen"
+
+#: src/multisession.c:84
+msgid ""
+"Some drives have no hardware support for multi session type tracks, and this "
+"option needs to be enabled on those (this includes some Sony drives). "
+"Currently you also have to enable this option for making multi session disks "
+"in DAO/SAO mode."
+msgstr ""
+"Einige Laufwerke unterstützen Multisession Tracks nicht per Hardware. Für "
+"solche Laufwerke (u.a. einige Sony Laufwerke) ist diese Option zu "
+"aktivieren. Zur Zeit müssen Sie diese Option auch aktivieren, um "
+"Multisession-CDs im DAO/SAO-Modus zu erstellen."
+
+#: src/multisession.c:92
+msgid "CDplus"
+msgstr "CDplus"
+
+#: src/multisession.c:95
+msgid ""
+"Make an image for CDplus. The first session of CDplus consist of audio "
+"tracks and the second session is a data track. When making a multi session "
+"CD, genisoimage usually reads the directory structure from the previous "
+"session. This option disables that (as audio tracks have no directory "
+"structure)."
+msgstr ""
+"Erstelle ein Image für eine CDplus. Die erste Session einer CDplus besteht "
+"aus Audio-Tracks und die zweite Session ist ein Daten-Track. Beim Erstellen "
+"einer Multisession-CD liest genisoimage gewöhnlich eine Verzeichnisstruktur "
+"der vorhergehenden Session aus. Diese Option schaltet dies ab (da Audio-"
+"Tracks keine Verzeichnisstruktur besitzen)."
+
+#: src/multisession.c:114
+msgid ""
+"Path to old session image, usually the drive where the multi session CD is (/"
+"dev/rcd0a), but can also be an existing image on disk. Leave this empty for "
+"first session."
+msgstr ""
+"Pfad zum Session-Image, normalerweise das Device wo die Multisession-CD ist "
+"(/dev/rcd0a), aber kann auch eine vorhandene Image-Datei auf CD sein. Leer "
+"lassen für die erste Session."
+
+#: src/multisession.c:119
+msgid ""
+"Path to old session image, usually the drive where the multi session CD is (/"
+"dev/hdb), but can also be an existing image on disk. Leave this empty for "
+"first session."
+msgstr ""
+"Pfad zum Session-Image, normalerweise das Device wo die Multisession-CD ist "
+"(/dev/hdb), aber kann auch eine vorhandene Image-Datei auf CD sein. Leer "
+"lassen für die erste Session."
+
+#: src/multisession.c:125 src/preferences.c:462
+msgid "Path to old session: "
+msgstr "Pfad zur alten Session: "
+
+#: src/optimize_usage.c:197
+#, c-format
+msgid "Sectors: %ld"
+msgstr "Sectoren: %ld"
+
+#: src/optimize_usage.c:201
+#, c-format
+msgid "Size: %ld MB"
+msgstr "Größe: %ld MB"
+
+#: src/optimize_usage.c:293
+msgid "Enter the size of your CD-R (e.g., 340000)/DVD-R (e.g., 2298000)"
+msgstr "Größe der CD-R eingeben (z.B. 340000/DVD-R (z.B. 2298000)"
+
+#: src/optimize_usage.c:296
+msgid "Make it so"
+msgstr "Übernehmen"
+
+#: src/optimize_usage.c:309
+msgid "sectors on disc"
+msgstr "Sectoren auf der CD"
+
+#. start button
+#: src/optimize_usage.c:321
+msgid "Compute estimate"
+msgstr "Schätzung berechnen"
+
+#: src/optimize_usage.c:326
+msgid ""
+"Attempt to determine which files to exclude in order for them to utilize the "
+"CD space to the max, and selects them so you can confirm by pressing delete"
+msgstr ""
+"Versucht Dateien zum Weglassen zu bestimmen um den Platz auf der CD maximal "
+"auszunutzen, Dateien werden ausgewählt sodass sie mit `Ausgewählte löschen' "
+"entfernt werden können"
+
+#: src/optimize_usage.c:331
+msgid "Try harder"
+msgstr "Genauere Berechnung"
+
+#: src/optimize_usage.c:335
+msgid ""
+"Uses a more exact method of packing the files (useful if you have a lot of "
+"small files and in cases when you \"almost\" can fit everything on disk) - "
+"can be _very slow_"
+msgstr ""
+"Benutzt eine genauere Methode die Dateien zu packen (nützlich bei vielen "
+"kleinen Dateien und in Fällen wo \"fast\" alles auf die CD passt) - kann "
+"_sehr langsam_ sein"
+
+#: src/optimize_usage.c:347
+msgid "80 min"
+msgstr "80 Min"
+
+#: src/optimize_usage.c:353
+msgid "74 min"
+msgstr "74 Min"
+
+#: src/optimize_usage.c:359
+msgid "90 min"
+msgstr "90 Min"
+
+#: src/optimize_usage.c:365
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: src/optimize_usage.c:371
+msgid "disc"
+msgstr "CD"
+
+#: src/optimize_usage.c:377
+msgid "user"
+msgstr "Benutzerdefiniert"
+
+#. selected size labels
+#: src/optimize_usage.c:386
+msgid "Size: 650 MB"
+msgstr "Größe: 650 MB"
+
+#: src/optimize_usage.c:390
+msgid "Sectors: 333000"
+msgstr "Sektoren: 333000"
+
+#: src/optimize_usage.c:400
+msgid "Used:"
+msgstr "Benutzt:"
+
+#: src/optimize_usage.c:403
+msgid "Wasted:"
+msgstr "Übrig:"
+
+#: src/options.c:32
+msgid "Rock Ridge"
+msgstr "Rock Ridge"
+
+#: src/options.c:32
+msgid ""
+"Use the Rock Ridge extensions (long filenames and other UNIX file features "
+"like ownership, etc)"
+msgstr ""
+"Rock-Ridge-Erweiterungen benutzen (lange Dateinamen und andere UNIX Datei "
+"Eigenschaften wie Eigentümer, etc.)"
+
+#: src/options.c:33
+msgid "Anonymous Rock Ridge"
+msgstr "anonymes Rock Ridge"
+
+#: src/options.c:33
+msgid ""
+"File ownership and modes are set to useful values; uid/guid set to zero, all "
+"files are set readable and write bits/special mode bits are cleared"
+msgstr ""
+"Datei, Eigentümer und Modi werden auf sinnvolle Werte gesetzt; uid/gid auf "
+"Null, alle Dateien werden auf lesbar gesetzt und Schreibbits/spezielle mode "
+"bits werden gelöscht"
+
+#: src/options.c:34
+msgid "Allow 32 char filenames"
+msgstr "Erlaube 32 Zeichen Dateinamen"
+
+#: src/options.c:34
+msgid ""
+"Allow full 32 character filenames - may cause problems if disc intended for "
+"use in MS-DOS systems"
+msgstr ""
+"Erlaube volle 32 Zeichen Dateinamen - kann Probleme geben, falls die CD auf "
+"MS-DOS Systemen benutzt werden soll"
+
+#: src/options.c:35
+msgid "Joliet extension"
+msgstr "Joliet-Erweiterungen"
+
+#: src/options.c:35
+msgid ""
+"Generate Joliet directory records in addition to regular ISO 9660 file "
+"names, useful if disc to be used with Win9X/NT machines (gives you long "
+"filenames)"
+msgstr ""
+"Erzeuge Joliet-Verzeichnisse zusätzlich zu normalen ISO-9660-Dateinamen, "
+"nützlich wenn die CD auf Win9X/NT Systemen benutzt werden soll (ermöglicht "
+"lange Dateinamen)"
+
+#: src/options.c:36
+msgid "Generate TRANS.TBL files"
+msgstr "TRANS.TBL Dateien erzeugen"
+
+#: src/options.c:36
+msgid ""
+"Generate a file TRANS.TBL in each directory on the CD-ROM, which can be used "
+"on non-Rock Ridge capable systems to help establish the correct file names."
+msgstr ""
+"Erzeugt eine TRANS.TBL Datei in jedem Verzeichnis der CD, mit der die "
+"korrekten (langen) Dateinamen unter MS-DOS etc. zugeordnet werden können."
+
+#: src/options.c:37
+msgid "UDF extension"
+msgstr "UDF-Erweiterungen"
+
+#: src/options.c:37
+msgid "Include UDF support in the generated filesystem (e.g., for DVD Media)."
+msgstr ""
+"Füge dem erzeugten Dateisystem UDF-Unterstützung hinzu (z.B. für DVDs)."
+
+#: src/options.c:41
+msgid "Omit trailing period"
+msgstr "End-Punkt weglassen"
+
+#: src/options.c:41
+msgid ""
+"Omit trailing period from files that do not have a period. Violates ISO 9660."
+msgstr ""
+"Punkt am Ende des Dateinamens weglassen bei Dateinamen, die keinen Punkt am "
+"Ende haben. Widerspricht ISO9660."
+
+#: src/options.c:42
+msgid "No deep directory relocation"
+msgstr "Tiefe Verzeichnisse zulassen"
+
+#: src/options.c:42
+msgid ""
+"Do not use deep directory relocation, and instead just pack them in the way "
+"we see them. Violates ISO 9660."
+msgstr ""
+"Tiefe Verzeichnisse nicht verschieben, sondern sie so speichern wie sie "
+"vorhanden sind. Widerspricht ISO9660."
+
+#: src/options.c:43
+msgid "Allow files to begin with a period"
+msgstr "Dateinamen mit führendem Punkt erlauben"
+
+#: src/options.c:43
+msgid ""
+"Usually, a leading dot is replaced with an underscore in order to maintain "
+"MS-DOS compatibility. If any of the ISO extensions are enabled, this option "
+"is ignored (and always on)."
+msgstr ""
+"Normalerweise wird ein führender Punkt durch ein _ ersetzt, zur MS-DOS "
+"Kompatibilität. Wenn eine der ISO Erweiterungen ausgewählt ist (oder beide), "
+"wird diese Option ignoriert (und ist immer an)."
+
+#: src/options.c:44
+msgid "Omit version number"
+msgstr "Versionsnummern weglassen"
+
+#: src/options.c:44
+msgid "Omit version numbers from ISO 9660 file names. Violates ISO 9660"
+msgstr ""
+"Versionsnummern von ISO-9660-Dateinamen weglassen. Widerspricht ISO9660"
+
+#: src/options.c:45
+msgid "Bootable CD"
+msgstr "Bootbare CD"
+
+#: src/options.c:45
+msgid ""
+"Create a \"El Torito\" bootable CD, you also need to fill in the boot image "
+"and catalog below"
+msgstr ""
+"Erzeugt eine \"El Torito\" bootbare CD, benötigt auch Angaben für Boot-Image "
+"und Katalog unten"
+
+#: src/options.c:46
+msgid "Allow untranslated filenames"
+msgstr "Erlaube unkonvertierte Dateinamen"
+
+#: src/options.c:46
+msgid ""
+"Allows untranslated file names (for example, that have more than one dot (.) "
+"in file name). Completely violates ISO 9660. Use with caution."
+msgstr ""
+"Läßt unkonvertierte Dateinamen zu (z.B. Dateinamen, die mehr als einen Punkt "
+"(.) enthalten). Dies widerspricht ISO-9660, verwenden Sie diese Option daher "
+"mit Vorsicht."
+
+#: src/options.c:47
+msgid "Hide rr_moved"
+msgstr "rr_moved `unsichtbar' machen"
+
+#: src/options.c:47
+msgid "Rename the directory RR_MOVED to .rr_moved in the Rock Ridge tree."
+msgstr "Nennt das Rock-Ridge-rr_moved-Verzeichnis in .rr_moved um."
+
+#: src/options.c:48
+msgid "No RR"
+msgstr "Kein Rock Ridge"
+
+#: src/options.c:48
+msgid ""
+"Do not use the Rock Ridge attributes from previous sessions. This may allow "
+"genisoimage to work with multi session CDs with broken Rock Ridge signatures "
+"on the old sessions."
+msgstr ""
+"Verwende keine Rock-Ridge-Attribute aus den vorhergehenden Sessions. Dies "
+"könnte es genisoimage ermöglichen, CDs mit kaputten Rock-Ridge-Signaturen in "
+"vorhergehenden Sessions doch noch zu verwenden."
+
+#: src/options.c:49
+msgid "Generate DVD-Video Compatible UDF file system"
+msgstr "Erzeuge ein DVD-Video-kompatibles UDF-Dateisystem"
+
+#: src/options.c:49
+msgid "Fixes file ordering for DVD Video Players"
+msgstr "Stelle Dateireihenfolge für DVD-Player um"
+
+#: src/options.c:53
+msgid "Volume id: "
+msgstr "Volume-ID:"
+
+#: src/options.c:53
+msgid "Specifies the volume ID to be written into the master block."
+msgstr "Spezifiziert die Volume-ID die in den Master Block geschrieben wird."
+
+#: src/options.c:54
+msgid "Application id: "
+msgstr "Anwendungs-ID:"
+
+#: src/options.c:54
+msgid "This should describe the application that will be on the disc."
+msgstr "Dies sollte die Applikation auf der CD beschreiben."
+
+#: src/options.c:55
+msgid "Publisher id: "
+msgstr "Herausgeber-ID:"
+
+#: src/options.c:55
+msgid ""
+"This should describe the publisher of the CD-ROM, usually with a mailing "
+"address and phone number."
+msgstr ""
+"Dies sollte den Publisher der CD-ROM beschreiben, normalerweise mit einer "
+"Postadresse und Telefonnummer."
+
+#: src/options.c:59
+msgid "HFS"
+msgstr "HFS"
+
+#: src/options.c:59
+msgid "Create an ISO 9660/HFS hybrid CD"
+msgstr "Erzeugt eine ISO9660/HFS hybrid CD"
+
+#: src/options.c:60
+msgid "apple"
+msgstr "Apple-Erweiterungen"
+
+#: src/options.c:60
+msgid "Create an ISO 9660 CD with Apple's extensions"
+msgstr "Erzeugt eine ISO9660 CD mit Apples Erweiterungen"
+
+#: src/options.c:61
+msgid "probe"
+msgstr "Durchsuchen nach Apple/UNIX"
+
+#: src/options.c:61
+msgid "Search the contents of files for Apple/Unix file formats"
+msgstr "Durchsucht die Dateiinhalte nach Apple/Unix Dateiformaten"
+
+#: src/options.c:62
+msgid "netatalk"
+msgstr "NETATALK"
+
+#: src/options.c:62
+msgid "Look for NETATALK Macintosh files"
+msgstr "suche NETATALK-Macintosh-Dateien"
+
+#: src/options.c:66
+msgid "Autostart"
+msgstr "Autostart"
+
+#: src/options.c:66
+msgid ""
+"A filename in the root of an HFS CD to use for the QuickTime 2.0 Autostart "
+"feature to launch an application or document."
+msgstr ""
+"Hier kann ein Dateiname im Wurzelverzeichnis einer HFS-CD eingetragen "
+"werden, der für die Quicktime-2.0-Autostartfunktion verwendet wird, um eine "
+"Anwendung oder ein Dokument zu starten."
+
+#: src/options.c:70
+msgid "Boot image: "
+msgstr "Boot-Image: "
+
+#: src/options.c:70
+msgid ""
+"Specifies the path/filename of the boot image to be used. The path to the "
+"image should be specified relatively to the generated file tree (ie if you "
+"add a directory 'disks' with the boot image 'rescue.bin' inside in the Data "
+"files tab, you will end up with the boot file 'disks/rescue.bin' in the "
+"generated image, so you should put 'disks/rescue.bin' here)"
+msgstr ""
+"Gibt den Pfad/Dateinamen des Boot-Images an, das benutzt werden soll. Der "
+"Pfadangabe zu dem Image sollte relativ zu dem generierten Verzeichnisbaum "
+"sein (z.B. wenn Sie ein Verzeichnis 'disks' mit dem Boot-Image 'rescue.bin' "
+"zur 'Datenverzeichnisse'-Liste hinzufügen, wird das generierte CD-Image die "
+"Boot-Datei 'disks/rescue.bin' enthalten und Sie sollten hier 'disks/rescue."
+"bin' eintragen)"
+
+#: src/options.c:71
+msgid "Boot catalog: "
+msgstr "Boot-Katalog: "
+
+#: src/options.c:71
+msgid ""
+"Specifies the path/filename of the boot catalog to be used. This should be "
+"specified in the same manner as above (eg 'disks/boot.catalog'). Note that "
+"this file will be inserted by genisoimage in the target file system, so it "
+"should not conflict with an existing file!"
+msgstr ""
+"Gibt den Pfad/Dateinamen des Boot-Kataloges an. Dies sollte in der selben "
+"Form angegeben werden wie oben (z.B. 'disks/boot.catalog'). Beachten Sie, "
+"dass diese Datei von genisoimage in das Ziel-Dateisystem eingefügt wird, "
+"darum sollte es nicht mit einer existierenden Datei in Konflikt stehen!"
+
+#. option frames
+#: src/options.c:133
+msgid "General file system options"
+msgstr "Allgemeine Dateisystem-Optionen"
+
+#: src/options.c:144
+msgid "More specialized options"
+msgstr "Spezialisiertere Optionen"
+
+#: src/options.c:155
+msgid "HFS options"
+msgstr "HFS-Optionen"
+
+#: src/options.c:179
+msgid "Name options"
+msgstr "Namensoptionen"
+
+#: src/options.c:190
+msgid "\"El Torito\" bootable CD options"
+msgstr "\"El Torito\" bootbare CD-Optionen"
+
+#: src/options.c:207
+msgid "Custom genisoimage options"
+msgstr "angepasste genisoimage-Optionen:"
+
+#. mkisofs
+#: src/preferences.c:104
+msgid "genisoimage"
+msgstr "genisoimage"
+
+#: src/preferences.c:110
+msgid ""
+"Open up file selector and set the path to the genisoimage program (eg /usr/"
+"bin/genisoimage)"
+msgstr ""
+"Öffnet Dateiauswahl um den Pfad zu genisoimage zu setzen (also z.B. /usr/bin/"
+"genisoimage)"
+
+#: src/preferences.c:115
+msgid "Select path to genisoimage"
+msgstr "genisoimage suchen"
+
+#. cdrecord
+#: src/preferences.c:128
+msgid "wodim"
+msgstr "wodim"
+
+#: src/preferences.c:134
+msgid ""
+"Open up file selector and set the path to the wodim program (eg /usr/bin/"
+"wodim)"
+msgstr ""
+"Öffnet Dateiauswahl um den Pfad zu cdrecord zu setzen (also z.B. /usr/bin/"
+"wodim)"
+
+#: src/preferences.c:138
+msgid "Select path to wodim"
+msgstr "Wähle Pfad zu wodim"
+
+#. cdlabelgen
+#: src/preferences.c:150
+msgid "cdlabelgen"
+msgstr "cdlabelgen"
+
+#: src/preferences.c:156
+msgid ""
+"Open up file selector and set the path to the cdlabelgen program (eg /usr/"
+"bin/cdlabelgen)"
+msgstr ""
+"Öffnet Dateiauswahl um den Pfad zu cdlabelgen zu setzen (also z.B. /usr/bin/"
+"cdlabelgen)"
+
+#: src/preferences.c:160
+msgid "Select path to cdlabelgen"
+msgstr "cdlabelgen suchen"
+
+#. diff
+#: src/preferences.c:172
+msgid "diff"
+msgstr "diff"
+
+#: src/preferences.c:178
+msgid ""
+"Open up file selector and set the path to the diff program (tested with GNU "
+"diff 2.7, others will probably work)"
+msgstr ""
+"Öffnet Dateiauswahl um den Pfad zu diff zu setzen (getestet mit GNU diff "
+"2.7, andere werden wahrscheinlich auch laufen)"
+
+#: src/preferences.c:182
+msgid "Select path to diff"
+msgstr "diff suchen"
+
+#. cdda2wav
+#: src/preferences.c:194
+msgid "icedax"
+msgstr "icedax"
+
+#: src/preferences.c:200
+msgid ""
+"Open up file selector and set the path to the icedax program (eg /usr/bin/"
+"icedax)"
+msgstr ""
+"Öffnet Dateiauswahl um den Pfad zu icedax zu setzen (also z.B. /usr/bin/"
+"idedax)"
+
+#: src/preferences.c:204
+msgid "Select path to icedax"
+msgstr "Setze Pfad zu icedax"
+
+#. cdparanoia
+#: src/preferences.c:218
+msgid "cdparanoia"
+msgstr "cdparanoia"
+
+#: src/preferences.c:224
+msgid ""
+"Open up file selector and set the path to the cdparanoia program (eg /usr/"
+"bin/cdparanoia)"
+msgstr ""
+"Öffnet Dateiauswahl um den Pfad zu cdparanoia zu setzen (also z.B. /usr/bin/"
+"cdparanoia)"
+
+#: src/preferences.c:228
+msgid "Select path to cdparanoia"
+msgstr "cdparanoia suchen"
+
+#. lpr
+#: src/preferences.c:241
+msgid "lpr"
+msgstr "lpr"
+
+#: src/preferences.c:247
+msgid ""
+"Open up file requester and set the path to the lpr program (eg /usr/bin/"
+"lpr). Another method for printing can also be use (e.g. pdq)."
+msgstr ""
+"Öffnet Dateiauswahl um den Pfad zu lpr zu setzen (also z.B. /usr/bin/lpr) Es "
+"kann auch eine andere Methode zum Drucken benutzt werden (z.B. pdq)."
+
+#: src/preferences.c:252
+msgid "Select path to lpr"
+msgstr "Wähle Pfad zu lpr"
+
+#: src/preferences.c:332
+msgid ""
+"Set the fifo size (default is 4 MB, and it will be used if nothing is "
+"specified) - goes directly to the wodim fs= option so the syntax is the same "
+"as wodims (e.g. 10x53k == 630 kBytes)"
+msgstr ""
+"Setzt die FIFO-Größe (Standard ist 4 MB, wird benutzt wenn nichts angegeben "
+"ist) - geht direkt in wodims fs= Option, d.h. die Syntax ist die gleiche wie "
+"wodims (z.B. 10x63k = 630 kBytes)"
+
+#: src/preferences.c:350
+msgid "CDDA device: "
+msgstr "CDDA Device: "
+
+#: src/preferences.c:357
+msgid "The path to audio cdrom to read from (for example /dev/cdrom or 0,6,0)."
+msgstr ""
+"Pfad zum Audio CD-Laufwerk, von dem gelesen werden soll (z.B. /dev/cdrom "
+"oder 0,6,0)."
+
+#: src/preferences.c:362
+msgid "cdrom device: "
+msgstr "CDROM-Device: "
+
+#: src/preferences.c:369
+msgid "The path to existing ISO cdrom (for example /dev/cdrom or 0,6,0)."
+msgstr "Pfad zu existierender ISO-CD (z.B. /dev/cdrom oder 0,6,0)."
+
+#: src/preferences.c:387
+msgid "Enable tool tips"
+msgstr "Tooltips einschalten"
+
+#: src/preferences.c:390
+msgid "Toggles display of all tool tips"
+msgstr "Schaltet Anzeige aller Tooltips an oder aus"
+
+#: src/preferences.c:394
+msgid "Progress bar has own window"
+msgstr "Fortschritts-Anzeige im eigenen Fenster"
+
+#: src/preferences.c:397
+msgid ""
+"If disabled the progress-info-widget is created as a child to the main "
+"window, and not in a window of it's own"
+msgstr ""
+"Bestimmt ob die Fortschritts-Anzeige (MBs geschrieben, fertig in ?? "
+"Minuten...) in ein eigenes Fenster oder ins Hauptfenster kommt"
+
+#: src/preferences.c:402
+msgid "Dummy enabled by default"
+msgstr "Testlauf standardmäßig eingeschaltet"
+
+#: src/preferences.c:405
+msgid "Have the dummy run check box ticked when starting gcombust."
+msgstr "gcombust startet mit ausgewähltem `Dummy-Testlauf'."
+
+#: src/preferences.c:409
+msgid "Eject target enabled by default"
+msgstr "Schublade öffnen standardmäßig eingeschaltet"
+
+#: src/preferences.c:412
+msgid "Have the eject target check box ticked when starting gcombust."
+msgstr "gcombust startet mit ausgewähltem `Schublade öffnen'."
+
+#: src/preferences.c:417
+msgid "Multi Session enabled by default"
+msgstr "Multisession standardmäßig eingeschaltet"
+
+#: src/preferences.c:420
+msgid "Have the multi session run check box ticked when starting gcombust."
+msgstr "Schalte Multisession beim Start von gcombust standardmäßig ein."
+
+#: src/preferences.c:424
+msgid "Validate multi session disks"
+msgstr "Prüfe Multisession-CDs"
+
+#: src/preferences.c:427
+msgid ""
+"When performing multi session operations, try to check that the CD "
+"containing the old session is correct (not available on all platforms)."
+msgstr ""
+"Versuche zu prüfen, ob die eingelegte Multisession-CD die richtigen alten "
+"Sessions enthält (nicht auf allen Plattformen verfügbar)."
+
+#: src/preferences.c:434
+msgid "Get size enabled by default"
+msgstr "'Größe übergeben' standardmäßig eingeschaltet"
+
+#: src/preferences.c:437
+msgid "Have the \"get size\" check box ticked when starting gcombust."
+msgstr "gcombust startet mit ausgewähltem `Größe übergeben'."
+
+#: src/preferences.c:441
+msgid "Beep"
+msgstr "Piep"
+
+#: src/preferences.c:444
+msgid "Emit a beep when operations are completed."
+msgstr "Piepe wenn die Operationen beendet wurden."
+
+#: src/preferences.c:451
+msgid "Have the \"Burnproof\" check box ticked when starting gcombust."
+msgstr "gcombust startet mit ausgewähltem `Prüfen beim Brennen'."
+
+#: src/preferences.c:458
+msgid "Have the \"Disable fixate\" check box ticked when starting gcombust."
+msgstr "gcombust startet mit ausgewähltem `Deaktiviere Abschließen'."
+
+#: src/preferences.c:470
+msgid "Default path to the old session when starting gcombust."
+msgstr "Standard-Pfad zur alten Session beim Start von gcombust."
+
+#: src/preferences.c:474
+msgid "Completion message"
+msgstr "Meldung bei Fertigstellung"
+
+#: src/preferences.c:477
+msgid "Show a pop-up dialog upon completion of operation"
+msgstr "Zeige ein Nachrichten-Fenster, wenn die Operation beendet ist."
+
+#: src/preferences.c:481
+msgid "Overburn"
+msgstr "Überbrennen"
+
+#: src/preferences.c:484
+msgid "Have the overburn button enabled by default"
+msgstr "'Überbrennen' standardmäßig eingeschaltet"
+
+#: src/preferences.c:562
+msgid "ISO"
+msgstr "ISO"
+
+#: src/preferences.c:562
+msgid "Select default file (or dir if ending with /) to write ISO images to"
+msgstr ""
+"Voreingestellten Dateinamen (oder Verzeichnis, wenn dies auf / endet) für "
+"erzeugte ISO-Images auswählen."
+
+#: src/preferences.c:563
+msgid "Default file to write ISO images to."
+msgstr "Voreingestellter Dateiname für erzeugte ISO Images."
+
+#: src/preferences.c:568
+msgid "WAV"
+msgstr "WAV"
+
+#: src/preferences.c:568
+msgid "Select default dir to write WAV files to"
+msgstr "Voreingestelltes Verzeichnis zum .wav Dateien schreiben auswählen"
+
+#: src/preferences.c:569
+msgid "Default dir to write WAV files to."
+msgstr ""
+"Voreinstellung für das Verzeichnis in das .wav Dateien geschrieben werden."
+
+#: src/preferences.c:576
+msgid "Selection"
+msgstr "Auswahl"
+
+#: src/preferences.c:576
+msgid "Select default directory where file selection profiles are stored."
+msgstr "Voreingestelltes Verzeichnis zum Speichern von Dateiauswahlprofilen."
+
+#: src/preferences.c:577
+msgid "Default directory for file selection profiles.."
+msgstr "Voreinstellung für Verzeichnis zum Speichern der Auswahlprofile.."
+
+#: src/preferences.c:589
+#, c-format
+msgid ""
+" %s does not exist, \n"
+" some of gcombusts operations will not work "
+msgstr ""
+" %s existiert nicht, \n"
+" einige von gcombusts Funktionen werden nicht laufen "
+
+#: src/preferences.c:598
+#, c-format
+msgid ""
+" %s is a directory, \n"
+" it should be the complete path to the executable file, \n"
+"including the program name"
+msgstr ""
+" %s ist ein Verzeichnis, \n"
+" es sollte der komplette Pfad zur ausführbaren Datei sein, \n"
+"inclusive dem Programnamen"
+
+#: src/preferences.c:798
+msgid "Preferences"
+msgstr "Voreinstellungen"
+
+#. add notebookpage labels
+#: src/preferences.c:825
+msgid "Program paths"
+msgstr "Programmpfade"
+
+#: src/preferences.c:829
+msgid "Devices"
+msgstr "Laufwerke"
+
+#: src/preferences.c:832
+msgid "Misc"
+msgstr "Verschiedenes"
+
+#: src/preferences.c:835
+msgid "Storage paths"
+msgstr "Datenpfade"
+
+#: src/preferences.c:843
+msgid "Cancel"
+msgstr "Abbruch"
+
+#: src/preferences.c:845
+msgid "Forget changes"
+msgstr "Änderungen vergessen"
+
+#: src/preferences.c:850
+msgid "Ok"
+msgstr "Ok"
+
+#: src/preferences.c:852
+msgid "Accept and save changes"
+msgstr "Änderungen übernehmen und speichern"
+
+#: src/progressbars.c:134
+msgid "Making image, please wait."
+msgstr "Image wird erzeugt, bitte warten."
+
+#: src/progressbars.c:214 src/progressbars.c:385 src/progressbars.c:423
+msgid "Waiting for burn to start\n"
+msgstr "Erwarte Beginn des Schreibens\n"
+
+#: src/progressbars_gui.c:77
+#, c-format
+msgid "Done in: %d min, %d sec"
+msgstr "Fertig in: %d min, %d sec"
+
+#: src/progressbars_gui.c:79
+#, c-format
+msgid "Done in %d sec"
+msgstr "Fertig in %d sek"
+
+#: src/progressbars_gui.c:87 src/progressbars_gui.c:97
+msgid ""
+"Burn in progress, please wait.\n"
+"Track: 00 / 00 "
+msgstr ""
+"Schreibe CD, bitte warten.\n"
+"Track: 00 / 00 "
+
+#: src/progressbars_gui.c:89 src/progressbars_gui.c:99
+#, c-format
+msgid ""
+"Burn in progress, please wait.\n"
+"Track: %02d / %02d"
+msgstr ""
+"Schreibe CD, bitte warten.\n"
+"Track: %02d / %02d"
+
+#: src/progressbars_gui.c:107
+msgid ""
+"Dump in progress, please wait.\n"
+"Track: 00 / 00 "
+msgstr ""
+"Lese CD, bitte warten.\n"
+"Track: 00 / 00 "
+
+#: src/progressbars_gui.c:109
+#, c-format
+msgid ""
+"Dump in progress, please wait.\n"
+"Track: %02d / %02d"
+msgstr ""
+"Lese CD, bitte warten.\n"
+"Track: %02d / %02d"
+
+#: src/progressbars_gui.c:154
+msgid "Operation aborted."
+msgstr "Vorgang abgebrochen."
+
+#: src/progressbars_gui.c:173
+msgid "Really sure you want to abort?"
+msgstr "Wirklich abbrechen?"
+
+#: src/progressbars_gui.c:200
+msgid "Status"
+msgstr "Status"
+
+#: src/progressbars_gui.c:240
+msgid "STOP"
+msgstr "STOP"
+
+#: src/read_image.c:176
+#, c-format
+msgid ""
+" %ld bytes written \n"
+" (of %ld bytes)"
+msgstr ""
+" %ld Bytes geschrieben\n"
+" (von %ld Bytes)"
+
+#: src/read_image.c:224
+msgid ""
+" Copying of cd image to disk complete! \n"
+" "
+msgstr ""
+" Kopieren des CD-Images auf die Platte fertig! \n"
+" "
+
+#: src/read_image.c:236
+msgid " Can't open device for reading. "
+msgstr " Kann Device nicht zum Lesen öffnen. "
+
+#: src/read_image.c:240
+msgid " Can't open file for writing. "
+msgstr " Kann Datei nicht zum Schreiben öffnen! "
+
+#: src/read_image.c:244
+msgid " Can't read size of image to read. "
+msgstr " Kann Größe des zu lesenden Images nicht lesen. "
+
+#: src/read_image.c:248
+msgid ""
+" Error reading image from device, retried several times \n"
+" before giving up (probably a bad CDROM drive or a bad CD-R). "
+msgstr ""
+" Fehler beim Lesen des Image vom Laufwerk. Mehrere Wiederholungen\n"
+" haben das Problem nicht behoben (möglicherweise ist das Laufwerk oder\n"
+" die CD-R defekt). "
+
+#: src/read_image.c:253
+msgid " Error writing image to disk (out of space?). "
+msgstr ""
+" Fehler beim Schreiben des Images auf den Rohling (nicht genügend Platz?). "
+
+#: src/read_image.c:257
+msgid " Can't lseek to retry after error reading from device. "
+msgstr " Kann nach fehlerhaftem Lesen vom Laufwerk kein lseek durchführen. "
+
+#: src/read_image.c:275
+msgid "Unrecoverable error detected, aborting."
+msgstr "Nicht behebbarer Fehler aufgetreten, Abbruch."
+
+#: src/read_image.c:291
+msgid ""
+" The supplied image name is a directory, \n"
+" please fill in the full path/imagename in the image location field. "
+msgstr ""
+" Der angegebene Image-Name ist ein Verzeichnis, \n"
+" bitte geben Sie den kompletten Pfad/Image-Namen im Image-Location Feld an. "
+
+#: src/read_image.c:313
+msgid "cd to image copy starting..."
+msgstr "Starte Kopieren der CD in Image-Datei..."
+
+#: src/read_image.c:315
+msgid "cd to image copy"
+msgstr "CD in Image kopieren"
+
+#: src/readers.c:52
+msgid "Burn in progress, please wait."
+msgstr "Schreibe CD, bitte warten."
+
+#: src/readers.c:56
+#, c-format
+msgid ""
+"Last chance to quit, starting in\n"
+" %d seconds."
+msgstr ""
+"Letzte Möglichkeit zum Abbrechen, beginne in\n"
+" %d Sekunden."
+
+#: src/readers.c:74
+msgid "Fixating..."
+msgstr "Fixation..."
+
+#: src/readers.c:106
+msgid "Operation finished successfully!"
+msgstr "Vorgang erfolgreich beendet!"
+
+#: src/readers.c:108
+msgid "Operation encountered an error"
+msgstr "Fehler bei dieser Operation aufgetreten"
+
+#: src/readers.c:242
+msgid ""
+"genisoimage encountered an invalid node\n"
+"(e.g., a non-existent file)"
+msgstr ""
+"genisoimage traf auf einen ungültigen Knoten\n"
+"(z.B. eine nicht vorhandene Datei)"
+
+#: src/readers.c:245
+msgid "Maybe you ran out of hd space for image?"
+msgstr "Möglicherweise haben Sie nicht mehr genug Plattenplatz für das Image?"
+
+#: src/readers.c:248
+msgid ""
+"Joliet failed - maybe the image contains a filename-component longer than 64 "
+"characters?"
+msgstr ""
+"Joliet fehlgeschlagen, vielleicht enthält das Image einen Dateinamen länger "
+"als 64 Zeichen?"
+
+#: src/readers.c:334
+msgid ""
+"You are probably not running wodim as root or you have the wrong permissions "
+"on the burner device"
+msgstr ""
+"Sie lassen wodim wahrscheinlich nicht als root laufen oder Sie haben die "
+"falschen Datei-Rechte für das Brenner-Device."
+
+#: src/readers.c:337
+msgid "You need to insert an empty disk"
+msgstr "Leere Disk muss eingelegt sein"
+
+#: src/readers.c:340
+msgid "Something went wrong with genisoimage/reading the image"
+msgstr "Etwas ging schief mit genisoimage/dem Lesen des Images."
+
+#: src/readers.c:471
+msgid "Re-load disk and press OK"
+msgstr "CD neu laden und auf OK klicken"
+
+#: src/rip_audio.c:61 src/rip_audio.c:106
+msgid "You need to supply a device name to dump audio tracks from."
+msgstr "Um Audio Tracks lesen zu können muss ein Device angegeben sein."
+
+#: src/rip_audio.c:85 src/rip_audio.c:131
+msgid "You need to supply a path where to store the audio tracks."
+msgstr ""
+"Um Audio Tracks speichern zu können muss ein Verzeichnis angegeben sein."
+
+#: src/rip_audio.c:265 src/rip_audio.c:321
+msgid "Cannot stat supplied device"
+msgstr "Kann auf angegebenes Device nicht zugreifen"
+
+#: src/rip_audio.c:482 src/rip_audio.c:509
+msgid "Dumping CD to wav files"
+msgstr "Speichere CD in WAV Dateien"
+
+#: src/rip_audio.c:484 src/rip_audio.c:511
+msgid "Audio CD to wav dump"
+msgstr "Audio-CD nach WAV speichern"
+
+#: src/rip_audio.c:550
+msgid "Select dir where to dump audio files"
+msgstr "Wähle Verzeichnis zur Speicherung der Audio-Dateien"
+
+#: src/rip_audio.c:556
+msgid "Dump where:"
+msgstr "Wohin speichern:"
+
+#: src/rip_audio.c:560
+msgid ""
+"Open up a file selector where you can select the path to where you want to "
+"dump the audio CD as .wav files (~700MB of free space required) "
+msgstr ""
+"Öffne Verzeichnisauswahl und wähle einen Pfad, um die Audio-CD als .wav-"
+"Dateien zu speichern (~700MB freier Platz benötigt) "
+
+#: src/rip_audio.c:567
+msgid "This is the path to where the .wav files will be written"
+msgstr ""
+"Dies gibt das Verzeichnis an, in das die .wav-Dateien gespeichert werden"
+
+#: src/rip_audio.c:589
+msgid ""
+"Path to device from which to copy (for example for cooked style devices "
+"(plain IDE): /dev/hdb, or for SCSI devices in the \"cdrecord style\": 0,6,0)"
+msgstr ""
+"Pfad des Device von dem kopiert werden soll (z.B. für \"cooked style\" "
+"devices (normalerweise bei IDE): /dev/hdb, oder für SCSI devices im "
+"\"cdrecord Stil\" 0,6,0)"
+
+#: src/rip_audio.c:603
+msgid ""
+"Speed to use on the cdrom when reading the audio tracks (leave empty to use "
+"the default setting of the cdrom drive)."
+msgstr ""
+"Geschwindigkeit, mit der Audio-Tracks vom CD-Laufwerk gelesen werden sollen "
+"(lassen Sie dies leer, um die Standard-Geschwindigkeit des CD-Laufwerks zu "
+"verwenden)."
+
+#: src/rip_audio.c:609
+msgid "Close"
+msgstr "Schließen"
+
+#: src/rip_audio.c:614
+msgid "Close this window"
+msgstr "Schließe dieses Fenster"
+
+#: src/rip_audio.c:616
+msgid "Start"
+msgstr "Start"
+
+#: src/rip_audio.c:621
+msgid "Start converting the audio CD to .wav files"
+msgstr "Beginne die Konvertierung der Audio-CD in .wav-Dateien"
+
+#: src/rip_audio.c:640 src/status_text.c:150 src/verify.c:390
+msgid "Autoscroll text"
+msgstr "Text automatisch scrollen"
+
+#: src/rip_audio.c:641 src/status_text.c:152 src/verify.c:392
+msgid "Scroll down to the end of the text whenever something new is added"
+msgstr "Automatisch zum Ende des Textes scrollen wenn etwas neues erscheint"
+
+#: src/rip_audio.c:647 src/status_text.c:158 src/verify.c:400
+msgid "Clear"
+msgstr "Löschen"
+
+#: src/rip_audio.c:648
+msgid "Clears the output box bellow"
+msgstr "Löscht die Textboxen"
+
+#: src/rip_audio.c:654
+msgid "icedax output"
+msgstr "icedax-Ausgabe"
+
+#: src/status_text.c:116
+msgid "genisoimage/icedax output"
+msgstr "genisoimage/icedax-Ausgabe"
+
+#: src/status_text.c:121
+msgid "wodim output"
+msgstr "wodim-Ausgabe"
+
+#: src/status_text.c:160 src/verify.c:404
+msgid "Clears the text boxes"
+msgstr "Löscht die Textboxen"
+
+#: src/verify.c:56 src/verify.c:276
+msgid " No mount point for master supplied "
+msgstr " Kein Mount-Verzeichnis für Master angegeben "
+
+#: src/verify.c:62
+msgid ""
+"There are not paths added in the Data Files \n"
+"- aborting verify"
+msgstr ""
+"Keine Pfade für Datenverzeichnisse angegeben \n"
+"- Verifizieren abgebrochen"
+
+#: src/verify.c:242
+msgid ""
+"*** *** ***\n"
+"Verify finished.\n"
+msgstr ""
+"*** *** ***\n"
+"Verifizieren beendet.\n"
+
+#: src/verify.c:269
+msgid " No mount point for copy supplied "
+msgstr " Kein Mount-Verzeichnis für Kopie angegeben "
+
+#: src/verify.c:332
+msgid "Verify from:"
+msgstr "Verifizieren von:"
+
+#: src/verify.c:338
+msgid "Data files"
+msgstr "Datenverzeichnisse"
+
+#: src/verify.c:341
+msgid ""
+"Verify against the files selected in the data source window, don't use any "
+"image."
+msgstr ""
+"Verifizieren gegen die Dateien die im Datenverzeichnisfenster angegeben "
+"sind, kein Image benutzen."
+
+#: src/verify.c:347
+msgid "Mounted file system"
+msgstr "Gemountete Dateisysteme"
+
+#: src/verify.c:350
+msgid "Verify against a mounted file system."
+msgstr "Verifizieren gegen ein gemountetes Dateisystem."
+
+#: src/verify.c:355
+msgid ""
+"Where the master image is mounted (for example /mnt/cdrom) - for now you "
+"must mount the master yourself."
+msgstr ""
+"Wo das Master Image gemounted ist (z.B. /mnt/cdrom) - muss bis auf weiteres "
+"ausserhalb gcombust gemacht werden."
+
+#: src/verify.c:368
+msgid "Verify against (ie the copy):"
+msgstr "Verifizieren gegen (also die Kopie):"
+
+#: src/verify.c:372
+msgid ""
+"Where the copy is mounted (for example /mnt/cdr) - for now you must mount "
+"the copy yourself"
+msgstr ""
+"Wo die Kopie gemounted ist (z.B. /mnt/cdr) - muss bis auf weiteres "
+"ausserhalb gcombust gemacht werden."
+
+#: src/verify.c:377
+msgid ""
+"Start verifying - for now only a file system verify is available (basically "
+"a diff -r --brief master copy is done). The operation can take quite some "
+"time."
+msgstr ""
+"Verifizieren starten - bis auf weiteres ist nur ein Dateisystemvergleich "
+"möglich (macht einen diff -r --brief Master Kopie). Dies kann eine ganze "
+"Zeit dauern."
+
+#: src/verify.c:408
+msgid "Differences between master/copy (if any) below:"
+msgstr "Unterschiede zwischen Master und Kopie hier (so vorhanden):"
+
+#~ msgid "mkisofs"
+#~ msgstr "mkisofs"
+
+#~ msgid "cdrecord"
+#~ msgstr "cdrecord"
+
+#~ msgid "cdda2wav"
+#~ msgstr "cdda2wav"
+
+#~ msgid ""
+#~ "Open up file selector and set the path to the cdda2wav program (eg /usr/"
+#~ "bin/cdda2wav)"
+#~ msgstr ""
+#~ "Öffnet Dateiauswahl um den Pfad zu cdda2wav zu setzen (also z.B. /usr/bin/"
+#~ "cdda2wav)"
+
+#~ msgid "Select path to cdda2wav"
+#~ msgstr "cdda2wav suchen"
+
+#~ msgid "mkisofs/cdda2wav output"
+#~ msgstr "mkisofs/cdda2wav Ausgabe"
+
+#~ msgid ""
+#~ "All mkisofs versions prior to the one found\n"
+#~ "in cdrtools-1.10a16 has a bug regarding the handling of\n"
+#~ "the -- shell escape. Starting from version 0.1.43,\n"
+#~ "gcombust uses the -- sequence (I spent an evening\n"
+#~ "tracking down and fixing the mkisofs bug - I think I'm\n"
+#~ "entitled to use the feature :). This means gcombust will\n"
+#~ "only work with a recent mkisofs (check with mkisofs --version,\n"
+#~ "it should be at least 1.14a16). gcombust does not check the\n"
+#~ "versions of the programs it invokes.\n"
+#~ msgstr ""
+#~ "Alle Versionen von mkisofs vor derjenigen in cdrtools-1.10a16 haben\n"
+#~ "einen Fehler in der Behandlung des -- Shell-Symbols. Seit Version\n"
+#~ "0.1.43 benutzt gcombust die -- Sequenz (Ich habe einen Abend damit\n"
+#~ "verbracht den mkisofs-Fehler zu finden - ich denke ich habe das Recht,\n"
+#~ "diese Funktion zu benutzen :).  Das bedeutet, gcombust funktioniert\n"
+#~ "nur mit neuerem mkisofs (prüfen Sie es mit mkisofs --version, es\n"
+#~ "sollte mindestend 1.14a16 sein). gcombust prüft die Versionen der\n"
+#~ "Programme, die es aufruft nicht.\n"
+
+#~ msgid "Select speed:"
+#~ msgstr "Schreibgeschwindigkeit:"
+
+#~ msgid ""
+#~ "Number of pathcomponents to ignore/include by default (depends on "
+#~ "radiobutton setting bellow)"
+#~ msgstr ""
+#~ "Anzahl von Pfadelementen die standardmäßig ignoriert/eingeschlossen "
+#~ "werden sollen (abhängig von Radio-Knopf unten)"
+
+#~ msgid "No files selected"
+#~ msgstr "Keine Dateien ausgewählt"
+
+#~ msgid "Could not determine base directory, this is a bug."
+#~ msgstr "Konnte das Basisverzeichnis nicht finden, dies ist ein Fehler."
+
+#~ msgid "Scsibus:"
+#~ msgstr "Scsibus:"
+
+#~ msgid "Asume audio data is in byte-swapped (little-endian) order"
+#~ msgstr "Nimmt an, die Audio-Daten sind byte-vertauscht (little-endian)"
+
+#~ msgid "ISO creation program: "
+#~ msgstr "Programm zum ISO erzeugen: "
+
+#~ msgid "Choose between mkisofs and mkhybrid for making ISO images"
+#~ msgstr "Benutzt entweder mkiosfs oder mkhybrid um ISO-Images zu erzeugen"
+
+#~ msgid "mkhybrid options"
+#~ msgstr "mkhybrid-Optionen"
+
+#~ msgid "mkhybrid"
+#~ msgstr "mkhybrid"
+
+#~ msgid ""
+#~ "Open up file selector and set the path to the mkhybrid program (eg /usr/"
+#~ "bin/mkhybrid)"
+#~ msgstr ""
+#~ "Öffnet Dateiauswahl um den Pfad zu mkhybrid zu setzen (also z.B. /usr/bin/"
+#~ "mkhybrid)"
+
+#~ msgid "Select path to mkhybrid"
+#~ msgstr "mkhybrid suchen"
+
+#~ msgid "device:"
+#~ msgstr "Device:"
+
+#~ msgid "Rip"
+#~ msgstr "Rip"
+
+#~ msgid "Clears the text box"
+#~ msgstr "Löscht die Textbox"
+
+#, fuzzy
+#~ msgid "Please select where to make the image:"
+#~ msgstr "Auswahl wo das Image erzeugt werden soll"
+
+#, fuzzy
+#~ msgid "Start converting the audio CD to .wav files with Cdparanoia"
+#~ msgstr "Beginne die Konvertierung der Audio-CD in .wav-Dateien"
+
+#~ msgid ""
+#~ "Specifies the path/filename of the boot image to be used, relative to the "
+#~ "first directory added in the Data-CD frame. All files in that directory "
+#~ "will be in the root of the cd when making a bootable cd!"
+#~ msgstr ""
+#~ "Spezifiziert den Pfad/Dateiname des Boot Images, relativ zum ersten im "
+#~ "Daten CD Frame angegebenen Verzeichnis. Alle Dateien in diesem "
+#~ "Verzeichnis erscheinen in der Root der bootbaren CD!"
+
+#~ msgid ""
+#~ "Specifies the path/filename of the boot catalog to be used, relative to "
+#~ "the first directory added in the Data-CD frame. It will quietly be "
+#~ "overwritten if it already exists"
+#~ msgstr ""
+#~ "Spezifiziert den Pfad/Dateiname der Boot Catalog Datei, relativ zum "
+#~ "ersten im Daten CD Frame angegebenen Verzeichnis. Sie wird ohne Nachfrage "
+#~ "überschrieben falls sie schon existiert"
+
+#~ msgid ""
+#~ " When making multisession CDs you cannot burn on the fly, \n"
+#~ " (except for the first session). Please make an image. "
+#~ msgstr ""
+#~ " Multisession CDs können nur vom Image gebrannt werden,\n"
+#~ " (ausgenommen die erste Session). Bitte erst ein Image erstellen. "
