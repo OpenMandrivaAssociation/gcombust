@@ -1,6 +1,6 @@
 %define name	gcombust
 %define version	0.1.55
-%define release	%mkrel 17
+%define release	18
 
 Name:		%{name}
 Summary:	Disc writing frontend
