@@ -14,7 +14,7 @@ Patch2:		gcombust-0.1.55-gcc4.patch
 Patch3:		gcombust-0.1.55-desktop.patch
 Patch4:		gcombust-0.1.55-cdrkit.patch
 Group:		Archiving/Cd burning
-URL:		http://www.abo.fi/~jmunsin/gcombust/
+URL:		https://www.abo.fi/~jmunsin/gcombust/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 License:	GPLv2+
 Requires:	cdrkit cdrkit-genisoimage cdrkit-icedax
