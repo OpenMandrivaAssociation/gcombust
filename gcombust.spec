@@ -19,6 +19,11 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 License:	GPLv2+
 Requires:	cdrkit cdrkit-genisoimage cdrkit-icedax
 Requires:	cdlabelgen diffutils cdparanoia
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	imagemagick
 BuildRequires:	gtk+-devel
 
